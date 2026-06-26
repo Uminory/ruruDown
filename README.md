@@ -8,7 +8,7 @@ B站视频缓存导出工具 —— 将 B站离线缓存无损导出为 MP4/M4A/
 ## 系统要求
 
 - Android 8.0 (API 26)+
-- 已安装并激活 [Shizuku](https://shizuku.rikka.app/)
+- 已安装并激活 [Shizuku](https://shizuku.rikka.app/download/)
 
 ## 下载
 
