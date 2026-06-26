@@ -1,16 +1,12 @@
 # 第三方开源组件许可 (Third-Party Licenses)
 
-本应用使用了以下开源项目。我们衷心感谢原作者及贡献者。
+本应用使用了以下开源项目。衷心感谢原作者及贡献者。
 
 ## FFmpeg
 
 本项目使用 FFmpeg，遵循 **GNU Lesser General Public License (LGPL)** 授权。
 
-FFmpeg 是 FFmpeg 开发者的商标。
-
-本项目仅链接 FFmpeg 的 LGPL 组件（libavcodec, libavformat, libavutil），不包含 GPL 组件。用户可以自行替换 FFmpeg 库文件。
-
-LGPL 许可证全文：https://www.gnu.org/licenses/lgpl-3.0.html
+本项目仅链接 FFmpeg 的 LGPL 组件（libavcodec, libavformat, libavutil），不包含 GPL 组件。
 
 ## Shizuku
 
