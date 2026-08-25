@@ -87,21 +87,21 @@ Download may additionally require the all-files-access permission in system sett
 
 What It Does
 
-· Scans cached videos, sortable by duration / size / time, with cover, uploader,
+- Scans cached videos, sortable by duration / size / time, with cover, uploader,
   quality, and part information.
-· Exports video .mp4 (audio & video stream copy, no re-encoding, quality
+- Exports video .mp4 (audio & video stream copy, no re-encoding, quality
   identical to cache).
-· Exports audio .m4a.
-· Exports danmaku .xml (bilibili XML format, loadable by players).
-· Batch export queue with foreground service + notification progress; continues
+- Exports audio .m4a.
+- Exports danmaku .xml (bilibili XML format, loadable by players).
+- Batch export queue with foreground service + notification progress; continues
   when leaving the screen.
-· Built-in player: video full‑screen landscape, audio mini player bar.
-· Long-press on audio page to multi-select and batch delete.
-· UI languages: English / 日本語 / 简体中文 / 繁體中文, following system or manually set.
+- Built-in player: video full‑screen landscape, audio mini player bar.
+- Long-press on audio page to multi-select and batch delete.
+- UI languages: English / 日本語 / 简体中文 / 繁體中文, following system or manually set.
 
 Not supported yet
 
-· Converting danmaku.pb-only caches into XML is not supported yet.
+- Converting danmaku.pb-only caches into XML is not supported yet.
 
 ---
 
@@ -115,10 +115,10 @@ on device; Settings → Clear local cache wipes the index database and thumbnail
 
 Licensing
 
-· Application: free but closed-source; commercial use and redistribution are
+- Application: free but closed-source; commercial use and redistribution are
   prohibited. See LICENSE.md.
-· Third-party components: see THIRD-PARTY.md.
-· FFmpeg: used via dynamic linking under LGPL v2.1. License text, build
+- Third-party components: see THIRD-PARTY.md.
+- FFmpeg: used via dynamic linking under LGPL v2.1. License text, build
   scripts, configuration, and replacement instructions are available in
   [ffmpeg/README](ffmpeg/README.md) and [licenses/LGPL-2.1.txt](licenses/LGPL-2.1.txt).
 
