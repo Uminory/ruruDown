@@ -85,4 +85,5 @@ Android 动态链接器无法识别 libavformat.so.61 这类文件名。
 
 [LGPL-2.1](../licenses/LGPL-2.1.txt) ·
 https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html ·
+
 FFmpeg 法律声明：https://ffmpeg.org/legal.html
