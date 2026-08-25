@@ -7,7 +7,7 @@ Copyright © 2026 nagasaki. All rights reserved.
 This license covers the ruruDown application itself. Third-party components
 distributed alongside it are licensed under their own terms — FFmpeg under LGPL v2.1
 (see [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) and
-[`ffmpeg/README.md`](ffmpeg/README.md)) — and nothing here reduces the rights those
+[`ffmpeg/README`](ffmpeg/README.md)) — and nothing here reduces the rights those
 licenses grant you.
 
 ## Permitted
