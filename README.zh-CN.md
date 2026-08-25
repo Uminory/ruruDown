@@ -1,6 +1,6 @@
 <div align="center">
 
-[English](/README.md) · [简体中文](/README.zh_CN.md) · [日本語](/README.ja.md)
+[English](/README.md) · [简体中文](/README.zh-CN.md) · [日本語](/README.ja.md)
 
 **ruruDown** — 将 bilibili 缓存视频导出为普通的 mp4 / m4a / xml
 
