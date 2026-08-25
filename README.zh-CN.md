@@ -109,9 +109,9 @@ Shizuku 提供的文件通道只读访问该目录；读取基于远端文件描
 许可
 
 · 应用本体：免费闭源软件，禁止商业使用与再打包分发。详见 LICENSE.md。
-· 第三方组件：详见 [THIRD-PARTY.md](THIRD-PARTY.zh-CN.md)。
+· 第三方组件：详见 [THIRD-PARTY](THIRD-PARTY.zh-CN.md)。
 · FFmpeg：以 LGPL v2.1 动态链接方式使用。许可全文、构建脚本、编译配置与可替换说明见
-  [ffmpeg/README.md](ffmpeg/README.zh-CN.md) 与 [LGPL-2.1](licenses/LGPL-2.1.txt)。
+  [ffmpeg/README](ffmpeg/README.zh-CN.md) 与 [LGPL-2.1](licenses/LGPL-2.1.txt)。
 
 导出的内容版权归原作者所有。请仅用于个人离线观看，不要公开二次分发。
 
