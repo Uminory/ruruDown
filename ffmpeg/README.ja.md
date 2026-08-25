@@ -91,6 +91,7 @@ soname はバージョン番号なしのままにしてください（--target-o
 
 ライセンス全文
 
-../licenses/LGPL-2.1.txt ·
+[LGPL-2.1](../licenses/LGPL-2.1.txt) ·
 https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html ·
+
 FFmpeg 法的通知：https://ffmpeg.org/legal.html
