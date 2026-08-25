@@ -99,9 +99,6 @@ What It Does
 - Long-press on audio page to multi-select and batch delete.
 - UI languages: English / 日本語 / 简体中文 / 繁體中文, following system or manually set.
 
-Not supported yet
-
-- Converting danmaku.pb-only caches into XML is not supported yet.
 
 ---
 
