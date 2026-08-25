@@ -12,8 +12,8 @@ ruruDown 1.0.2（arm64-v8a）には、以下のサードパーティコンポー
 | バージョン | 7.1.5 (`release/7.1`, commit `9a4bb2c579a16b0469759743d6917d9e8e3cb8c6`) |
 | コンポーネント | `libavformat.so`, `libavcodec.so`, `libavutil.so` |
 | 用途 | コンテナ処理とストリームコピー（`-c copy`）、再エンコードなし |
-| ライセンス | LGPL v2.1 — [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) |
-| ソースと置き換え手順 | [`ffmpeg/README`](ffmpeg/README.jp.md) |
+| ライセンス | LGPL v2.1 — [`licenses/LGPL-2.1.txt`](../licenses/LGPL-2.1.txt) |
+| ソースと置き換え手順 | [`ffmpeg/README.ja.md`](../ffmpeg/README.ja.md) |
 
 著作権は FFmpeg プロジェクトの貢献者に帰属します。ソースは未改変であり、ライブラリは
 LGPL §6 に従って置き換え可能です。上記リンクのドキュメントを参照してください。
@@ -44,7 +44,6 @@ LGPL §6 に従って置き換え可能です。上記リンクのドキュメ�
 | Shizuku Provider (`dev.rikka.shizuku:provider`) | 13.1.5 | 同上 | © 2021 RikkaW |
 
 ```
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of this
 software and associated documentation files (the "Software"), to deal in the Software
 without restriction, including without limitation the rights to use, copy, modify,
@@ -61,7 +60,6 @@ PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIG
 HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
 CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 ```
 
 Shizuku は RikkaApps が開発したものであり、ruruDown は Shizuku プロジェクトとは
@@ -70,5 +68,5 @@ Shizuku は RikkaApps が開発したものであり、ruruDown は Shizuku プ�
 ## アプリケーション自体
 
 `librurumux.so`（FFmpeg の公開 API を呼び出すグルーレイヤー）およびすべての Kotlin
-コードは ruruDown に帰属し、[LICENSE](LICENSE.jp.md) の下でライセンスされ、
+コードは ruruDown に帰属し、[LICENSE](LICENSE.ja.md) の下でライセンスされ、
 ソースコードは公開されていません。

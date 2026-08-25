@@ -5,8 +5,8 @@ ruruDown 是免费软件——免费但闭源。
 版权所有 © 2026 nagasaki。保留所有权利。
 
 本许可仅适用于 ruruDown 应用本体。随本仓库分发的第三方组件按各自许可授权，
-其中 FFmpeg 按 LGPL v2.1（见 [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) 与
-[`ffmpeg/README`](ffmpeg/README.zh-CN.md)）授权。本许可的任何条款均不削减这些许可
+其中 FFmpeg 按 LGPL v2.1（见 [`licenses/LGPL-2.1.txt`](../licenses/LGPL-2.1.txt) 与
+[`ffmpeg/README.zh-CN.md`](../ffmpeg/README.zh-CN.md)）授权。本许可的任何条款均不削减这些许可
 授予您的权利。
 
 ## 允许

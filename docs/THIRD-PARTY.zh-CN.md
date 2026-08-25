@@ -11,8 +11,8 @@ Apache License 2.0 或 MIT 许可。这两种许可证均允许闭源分发，�
 | 版本 | 7.1.5 (`release/7.1`, commit `9a4bb2c579a16b0469759743d6917d9e8e3cb8c6`) |
 | 组件 | `libavformat.so`, `libavcodec.so`, `libavutil.so` |
 | 用途 | 容器处理与流复制（`-c copy`），不重编码 |
-| 许可 | LGPL v2.1 — [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) |
-| 源码与替换说明 | [`ffmpeg/README`](ffmpeg/README.zh-CN.md) |
+| 许可 | LGPL v2.1 — [`licenses/LGPL-2.1.txt`](../licenses/LGPL-2.1.txt) |
+| 源码与替换说明 | [`ffmpeg/README.zh-CN.md`](../ffmpeg/README.zh-CN.md) |
 
 版权归 FFmpeg 项目贡献者所有。源码未经修改，库可按 LGPL §6 替换；详见上文链接文档。
 
@@ -42,7 +42,6 @@ Apache License 2.0 或 MIT 许可。这两种许可证均允许闭源分发，�
 | Shizuku Provider (`dev.rikka.shizuku:provider`) | 13.1.5 | 同上 | © 2021 RikkaW |
 
 ```
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of this
 software and associated documentation files (the "Software"), to deal in the Software
 without restriction, including without limitation the rights to use, copy, modify,
@@ -59,7 +58,6 @@ PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIG
 HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
 CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 ```
 
 Shizuku 由 RikkaApps 开发，ruruDown 与 Shizuku 项目无任何关联。

@@ -6,8 +6,8 @@ Copyright © 2026 nagasaki. All rights reserved.
 
 本ライセンスは ruruDown アプリケーション本体にのみ適用されます。本リポジトリに
 同梱されるサードパーティコンポーネントは、それぞれのライセンス条件に従います。
-FFmpeg は LGPL v2.1（[`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) および
-[`ffmpeg/README`](ffmpeg/README.ja.md) 参照）の下で提供され、本ライセンスのいかなる
+FFmpeg は LGPL v2.1（[`licenses/LGPL-2.1.txt`](../licenses/LGPL-2.1.txt) および
+[`ffmpeg/README.ja.md`](../ffmpeg/README.ja.md) 参照）の下で提供され、本ライセンスのいかなる
 条項も、それらのライセンスが付与する権利を制限するものではありません。
 
 ## 許可されること

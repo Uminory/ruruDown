@@ -1,5 +1,7 @@
 # License
 
+English · [简体中文](docs/LICENSE.zh-CN.md) · [日本語](docs/LICENSE.ja.md)
+
 ruruDown is freeware — free but closed-source software.
 
 Copyright © 2026 nagasaki. All rights reserved.
@@ -7,7 +9,7 @@ Copyright © 2026 nagasaki. All rights reserved.
 This license covers the ruruDown application itself. Third-party components
 distributed alongside it are licensed under their own terms — FFmpeg under LGPL v2.1
 (see [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) and
-[`ffmpeg/README`](ffmpeg/README.md)) — and nothing here reduces the rights those
+[`ffmpeg/README.md`](ffmpeg/README.md)) — and nothing here reduces the rights those
 licenses grant you.
 
 ## Permitted
