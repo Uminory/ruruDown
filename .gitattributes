@@ -1,0 +1,10 @@
+# 一律 LF。校验文件被改成 CRLF 会让 `sha256sum -c` 直接失配，
+# build-ffmpeg.sh 被改成 CRLF 则连 shebang 都跑不起来。
+# LF everywhere: CRLF breaks `sha256sum -c` and the build script's shebang.
+* text=auto eol=lf
+
+*.apk binary
+*.so binary
+*.jks binary
+*.png binary
+*.jpg binary
