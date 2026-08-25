@@ -12,7 +12,7 @@ Apache License 2.0 或 MIT 许可。这两种许可证均允许闭源分发，�
 | 组件 | `libavformat.so`, `libavcodec.so`, `libavutil.so` |
 | 用途 | 容器处理与流复制（`-c copy`），不重编码 |
 | 许可 | LGPL v2.1 — [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) |
-| 源码与替换说明 | [`ffmpeg/README.md`](ffmpeg/README.md) |
+| 源码与替换说明 | [`ffmpeg/README`](ffmpeg/README.zh-CN.md) |
 
 版权归 FFmpeg 项目贡献者所有。源码未经修改，库可按 LGPL §6 替换；详见上文链接文档。
 
@@ -67,4 +67,4 @@ Shizuku 由 RikkaApps 开发，ruruDown 与 Shizuku 项目无任何关联。
 ## 应用自身
 
 `librurumux.so`（调用 FFmpeg 公开 API 的胶水层）与全部 Kotlin 代码属于 ruruDown，
-按 [LICENSE.md](LICENSE.md) 授权，源代码不公开。
+按 [LICENSE](LICENSE.zh-CN.md) 授权，源代码不公开。
