@@ -94,7 +94,7 @@ Download 以外のフォルダを選択する場合、システム設定で「�
 · アプリ本体：無料のクローズドソース。商用利用および再配布は禁止。詳細は LICENSE.md を参照。
 · サードパーティコンポーネント：THIRD-PARTY.md を参照。
 · FFmpeg：LGPL v2.1 の動的リンクとして使用。ライセンス全文、ビルドスクリプト、コンパイル設定、置き換え手順は
-  ffmpeg/README.md および licenses/LGPL-2.1.txt にあります。
+  [ffmpeg/README](ffmpeg/README.ja.md) および [licenses/LGPL-2.1.txt](licenses/LGPL-2.1.txt) にあります。
 
 エクスポートされたコンテンツの著作権は原作者に帰属します。個人的なオフライン視聴にのみ使用し、再配布は行わないでください。
 
