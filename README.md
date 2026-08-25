@@ -25,7 +25,7 @@ to the cache folder — it reads once and stream-copies out.
 > **Distribution-only repository**  
 > This repository contains only the APK, documentation, and the LGPL component
 > material. The application's own source code is not published (free but
-> closed-source — see [LICENSE.md](LICENSE.md)).
+> closed-source — see [LICENSE](LICENSE.md)).
 
 ---
 
