@@ -13,7 +13,7 @@ retained — this file serves as that notice.
 | Components | `libavformat.so`, `libavcodec.so`, `libavutil.so` |
 | Purpose | Container handling and stream copy (`-c copy`), no re-encoding |
 | License | LGPL v2.1 — [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) |
-| Source & replacement | [`ffmpeg/README.md`](ffmpeg/README.md) |
+| Source & replacement | [`ffmpeg/README`](ffmpeg/README.md) |
 
 Copyright belongs to the FFmpeg contributors. The source is unmodified and the
 libraries are replaceable per LGPL §6; see the document linked above.
@@ -69,5 +69,5 @@ Shizuku is developed by RikkaApps; ruruDown is not affiliated with the project.
 ## The application itself
 
 `librurumux.so` (the glue layer calling FFmpeg's public API) and all Kotlin code
-belong to ruruDown, are licensed under [LICENSE.md](LICENSE.md), and their source is
+belong to ruruDown, are licensed under [LICENSE](LICENSE.md), and their source is
 not published.
