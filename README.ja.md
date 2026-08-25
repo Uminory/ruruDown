@@ -14,8 +14,8 @@ bilibili クライアントが**端末にすでにキャッシュ済み**の動�
 
 | 項目 | 値 |
 |---|---|
-| バージョン | **1.0.1** (versionCode 101) |
-| ファイル | [`apk/ruruDown-1.0.1-arm64-v8a.apk`](apk/ruruDown-1.0.1-arm64-v8a.apk) |
+| バージョン | **1.0.2** (versionCode 102) |
+| ファイル | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](apk/ruruDown-1.0.2-arm64-v8a.apk) |
 | サイズ | 12.8 MB |
 | ABI | `arm64-v8a` のみ |
 | 必要環境 | Android 8.0 (API 26) 以上 |
@@ -38,7 +38,7 @@ f6fd5f1b610fd8b7c45740955fe6d93ef54e6739a7e9841a2659bbcaae7cb7fe
 **検証**
 
 ```bash
-sha256sum -c apk/ruruDown-1.0.1-arm64-v8a.apk.sha256
+sha256sum -c apk/ruruDown-1.0.2-arm64-v8a.apk.sha256
 ```
 
 ---

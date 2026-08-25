@@ -4,7 +4,7 @@
 
 **ruruDown** — Export bilibili cached videos to plain mp4 / m4a / xml
 
-[![Version](https://img.shields.io/badge/version-1.0.1-blue)]()
+[![Version](https://img.shields.io/badge/version-1.0.2-blue)]()
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)]()
 [![License](https://img.shields.io/badge/license-Freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)]()
@@ -31,8 +31,8 @@ to the cache folder — it reads once and stream-copies out.
 
 | Item | Value |
 |---|---|
-| Version | **1.0.1** (versionCode 101) |
-| File | [`apk/ruruDown-1.0.1-arm64-v8a.apk`](apk/ruruDown-1.0.1-arm64-v8a.apk) |
+| Version | **1.0.2** (versionCode 102) |
+| File | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](apk/ruruDown-1.0.2-arm64-v8a.apk) |
 | Size | 12.8 MB |
 | ABI | `arm64-v8a` only |
 | Requires | Android 8.0 (API 26) or newer |
@@ -55,7 +55,7 @@ If Android complains about a signature mismatch on upgrade, that APK did not com
 **Verify**
 
 ```bash
-sha256sum -c apk/ruruDown-1.0.1-arm64-v8a.apk.sha256
+sha256sum -c apk/ruruDown-1.0.2-arm64-v8a.apk.sha256
 ```
 
 ---

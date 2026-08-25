@@ -1,6 +1,6 @@
 # Third-Party Components
 
-ruruDown 1.0.1 (arm64-v8a) bundles the components listed below. Except for FFmpeg,
+ruruDown 1.0.2 (arm64-v8a) bundles the components listed below. Except for FFmpeg,
 they are all licensed under Apache License 2.0 or MIT. Both licenses permit
 closed-source distribution provided that the copyright and license notices are
 retained — this file serves as that notice.
@@ -44,7 +44,6 @@ Full text: https://www.apache.org/licenses/LICENSE-2.0
 | Shizuku Provider (`dev.rikka.shizuku:provider`) | 13.1.5 | As above | © 2021 RikkaW |
 
 ```
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of this
 software and associated documentation files (the "Software"), to deal in the Software
 without restriction, including without limitation the rights to use, copy, modify,

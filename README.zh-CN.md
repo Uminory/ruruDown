@@ -4,7 +4,7 @@
 
 **ruruDown** — 将 bilibili 缓存视频导出为普通的 mp4 / m4a / xml
 
-[![版本](https://img.shields.io/badge/版本-1.0.1-blue)]()
+[![版本](https://img.shields.io/badge/版本-1.0.2-blue)]()
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)]()
 [![许可](https://img.shields.io/badge/许可-免费闭源-orange)](../LICENSE.md)
 
@@ -28,8 +28,8 @@
 
 | 项目 | 值 |
 |---|---|
-| 版本 | **1.0.1** (versionCode 101) |
-| 文件 | [`apk/ruruDown-1.0.1-arm64-v8a.apk`](apk/ruruDown-1.0.1-arm64-v8a.apk) |
+| 版本 | **1.0.2** (versionCode 102) |
+| 文件 | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](apk/ruruDown-1.0.2-arm64-v8a.apk) |
 | 大小 | 12.8 MB |
 | 架构 | `arm64-v8a` only |
 | 系统要求 | Android 8.0 (API 26) 或更高 |
@@ -52,7 +52,7 @@ f6fd5f1b610fd8b7c45740955fe6d93ef54e6739a7e9841a2659bbcaae7cb7fe
 **校验**
 
 ```bash
-sha256sum -c apk/ruruDown-1.0.1-arm64-v8a.apk.sha256
+sha256sum -c apk/ruruDown-1.0.2-arm64-v8a.apk.sha256
 ```
 
 ---
