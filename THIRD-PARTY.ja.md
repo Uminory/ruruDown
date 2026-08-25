@@ -13,7 +13,7 @@ ruruDown 1.0.1（arm64-v8a）には、以下のサードパーティコンポー
 | コンポーネント | `libavformat.so`, `libavcodec.so`, `libavutil.so` |
 | 用途 | コンテナ処理とストリームコピー（`-c copy`）、再エンコードなし |
 | ライセンス | LGPL v2.1 — [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) |
-| ソースと置き換え手順 | [`ffmpeg/README.md`](ffmpeg/README.md) |
+| ソースと置き換え手順 | [`ffmpeg/README`](ffmpeg/README.jp.md) |
 
 著作権は FFmpeg プロジェクトの貢献者に帰属します。ソースは未改変であり、ライブラリは
 LGPL §6 に従って置き換え可能です。上記リンクのドキュメントを参照してください。
@@ -70,5 +70,5 @@ Shizuku は RikkaApps が開発したものであり、ruruDown は Shizuku プ�
 ## アプリケーション自体
 
 `librurumux.so`（FFmpeg の公開 API を呼び出すグルーレイヤー）およびすべての Kotlin
-コードは ruruDown に帰属し、[LICENSE.md](LICENSE.md) の下でライセンスされ、
+コードは ruruDown に帰属し、[LICENSE](LICENSE.jp.md) の下でライセンスされ、
 ソースコードは公開されていません。
