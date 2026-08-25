@@ -1,0 +1,2 @@
+0000000000000000000000000000000000000000 17556c730aca5065107162d42cdd791ee0d9924a nagasaki <nagasaki@localhost> 1787660438 +0800	commit (initial): ruruDown 1.0.1 — first public release
+17556c730aca5065107162d42cdd791ee0d9924a 23e5c45d11f0be8ce88f7fee8c3677876f363a42 nagasaki <nagasaki@localhost> 1787660469 +0800	commit: Pin LF line endings so the checksum files and build script survive checkout

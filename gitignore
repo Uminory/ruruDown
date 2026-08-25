@@ -1,0 +1,40 @@
+# 这是发布仓库：只放 APK、文档和 LGPL 组件材料。
+# 下面这些是保险栓——签名材料和应用源码**绝不能**进到这里来。
+# This is the distribution repo. The rules below are a safety net: signing material and
+# application source must never land here.
+
+# 签名材料 / signing material
+keystore/
+keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+
+# 应用源码与构建产物（本仓库不发布源代码）
+# Application source and build outputs (source is not published here)
+android/
+app/
+src/
+build/
+.gradle/
+.kotlin/
+local.properties
+*.iml
+.idea/
+
+# 中间产物 / intermediates
+*.aab
+*.apk.idsig
+mapping.txt
+
+# 系统垃圾 / OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 例外：发布用的 APK 与随包的 LGPL 库必须提交
+# Exceptions: the released APK and the bundled LGPL libraries are tracked on purpose
+!apk/*.apk
+!ffmpeg/prebuilt/**/*.so
