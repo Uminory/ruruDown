@@ -120,7 +120,7 @@ Licensing
 · Third-party components: see THIRD-PARTY.md.
 · FFmpeg: used via dynamic linking under LGPL v2.1. License text, build
   scripts, configuration, and replacement instructions are available in
-  ffmpeg/README.md and licenses/LGPL-2.1.txt.
+  [ffmpeg/README](ffmpeg/README.md) and [licenses/LGPL-2.1.txt](licenses/LGPL-2.1.txt).
 
 Exported content belongs to its original authors — keep it for personal offline
 viewing and do not redistribute it.
