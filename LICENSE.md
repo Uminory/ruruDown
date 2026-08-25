@@ -1,32 +1,47 @@
-# 软件许可协议 (License)
+# License
 
-版权所有 © 2026 長崎そよ (Nagasaki Soyo)。保留所有权利。
+ruruDown is freeware — free but closed-source software.
 
-## 授权许可
+Copyright © 2026 nagasaki. All rights reserved.
 
-本软件为**专有免费软件 (Proprietary Freeware)**。作者允许任何个人免费下载、安装、使用及分享官方发布的未修改版本。
+This license covers the ruruDown application itself. Third-party components
+distributed alongside it are licensed under their own terms — FFmpeg under LGPL v2.1
+(see [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt) and
+[`ffmpeg/README.md`](ffmpeg/README.md)) — and nothing here reduces the rights those
+licenses grant you.
 
-## 禁止行为
+## Permitted
 
-除法律另有规定或经作者书面许可外，您不得：
+Any individual may, free of charge:
 
-1. 将本软件或其任何部分用于商业目的；
-2. 出售、出租、倒卖或以任何形式有偿分发本软件；
-3. 对本软件进行反向工程、反编译或反汇编；
-4. 修改、重新打包或基于本软件创建衍生作品后重新发布；
-5. 删除、修改或隐藏软件中的版权声明及作者信息；
-6. 冒充作者或误导他人认为该软件由其他人或组织开发。
+- download, install and use this software, for any purpose and on any number of devices;
+- share the unmodified official release (the APK published in this repository) as is;
+- unpack this software, replace its FFmpeg shared libraries, re-sign and run the result
+  for your own use, in order to exercise your rights under LGPL v2.1 §6.
 
-## 免责声明
+## Prohibited
 
-- 本软件按"**现状**"提供，不提供任何形式的明示或默示担保，包括但不限于适销性、特定用途适用性及非侵权保证。
-- 作者不对因使用或无法使用本软件而导致的任何直接、间接、偶然或后果性损失承担责任。
-- 本项目与哔哩哔哩官方无关联。
-- 本工具仅用于导出用户本人设备上的本地缓存文件。
-- 用户应遵守相关法律法规及平台服务条款，不得利用本工具侵犯他人合法权益。
+- any commercial use;
+- selling, renting, sublicensing, or distributing for profit;
+- modifying or repackaging for commercial distribution;
+- removing, altering or hiding the copyright notices;
+- claiming to be the author of this software.
 
-使用本软件即表示您同意上述条款。
+Except as expressly permitted above, no license is granted to decompile,
+reverse-engineer, modify or create derivative works, and the source code is not
+published.
 
-### 联系作者：
-- Email: uminorysizuku@gmail.com
-- Bilibili: https://space.bilibili.com/292927431
+## No warranty
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR ITS USE.
+
+## Content
+
+This software only reads files the bilibili client has already cached on your device.
+Exported content remains the property of its original authors and the respective
+platform; what you do with those files is your own responsibility, and local law and
+platform terms apply.
