@@ -89,6 +89,7 @@ Android's loader will not pick up names like libavformat.so.61.
 
 Full License Text
 
-../licenses/LGPL-2.1.txt ·
+[LGPL-2.1](../licenses/LGPL-2.1.txt) ·
 https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html ·
+
 FFmpeg legal notice: https://ffmpeg.org/legal.html
