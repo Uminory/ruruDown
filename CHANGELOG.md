@@ -10,6 +10,8 @@ All notable changes to ruruDown, newest first. Version numbers match the APK's
 - Export queue is now a two-stage pipeline: one coroutine moves bytes, another verifies
   and cleans up temporary files, so finishing one item no longer blocks the next from
   starting.
+- An exported video is pushed to the system media index as soon as it has been verified,
+  so the gallery picks it up immediately instead of after a reboot or a scheduled scan.
 - Removed the floating export button from the home screen; exporting now starts from the
   multi-select bar only.
 - UI languages: English, 日本語, 简体中文, 繁體中文, switchable in Settings.
@@ -20,6 +22,8 @@ All notable changes to ruruDown, newest first. Version numbers match the APK's
 - 音频页支持长按多选、批量删除
 - 导出队列改为两级流水线：搬运与「核对 + 清理临时文件」各占一条协程，
   上一项收尾不再阻塞下一项开始搬运
+- 视频导出并校验通过后立刻推给系统媒体库，相册当场就能认出来，
+  不用等重启或者系统的定时扫描
 - 移除首页右下角的悬浮导出按钮，导出入口统一收进多选栏
 - 多语言界面：英文、日文、简体中文、繁体中文，可在设置里切换
 

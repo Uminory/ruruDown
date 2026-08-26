@@ -30,14 +30,14 @@ straight from [`apk/`](apk/) in this repository.
 
 ### Requirements
 
-| Item | Value |
-|---|---|
-| Version | **1.0.2** (versionCode 102) |
-| File | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](apk/ruruDown-1.0.2-arm64-v8a.apk) |
-| Size | 12.8 MiB (13,420,493 bytes) |
-| ABI | `arm64-v8a` only |
-| Requires | Android 8.0 (API 26) or newer |
-| SHA-256 | `703e28afa55e38c2271e7924a7ae161ae7ba0612e537aea29465a26369281987` |
+| Item     | Value                                                                  |
+| -------- | ---------------------------------------------------------------------- |
+| Version  | **1.0.2** (versionCode 102)                                            |
+| File     | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](apk/ruruDown-1.0.2-arm64-v8a.apk) |
+| Size     | 12.8 MiB (13,420,493 bytes)                                            |
+| ABI      | `arm64-v8a` only                                                       |
+| Requires | Android 8.0 (API 26) or newer                                          |
+| SHA-256  | `84f949c107f26dc8458574f6138b0b54776b479d097af5d93fddd641cc12a812`     |
 
 ### Signature
 
@@ -75,12 +75,16 @@ Defaults to `Download/ruruDown`. Change it in **Settings → Export folder** thr
 system directory picker. Folders outside `Download` may additionally require the
 all-files-access permission in system settings.
 
+> We recommend changing the export directory to a location other than the `Download` folder, as in some system versions, media files in the `Download` folder may not free up storage space after deletion.
+> This is not an issue with ruruDown, but a flaw in the system itself. The occupied space will be released after the **device is restarted**.
+
 ## What it does
 
 - Scans cached videos — sortable by duration / size / time, with cover, uploader,
   quality and part information.
 - Exports video as `.mp4` (audio and video stream copy, no re-encoding, quality
-  identical to the cache).
+  identical to the cache), and hands it straight to the system media index so it shows
+  up in the gallery without waiting for a reboot or a scheduled scan.
 - Exports audio as `.m4a`.
 - Exports danmaku as `.xml` (bilibili XML format, loadable by players).
 - Batch export queue backed by a foreground service with notification progress; keeps
