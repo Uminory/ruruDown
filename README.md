@@ -30,14 +30,14 @@ straight from [`apk/`](apk/) in this repository.
 
 ### Requirements
 
-| Item | Value |
-|---|---|
-| Version | **1.0.2** (versionCode 102) |
-| File | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](apk/ruruDown-1.0.2-arm64-v8a.apk) |
-| Size | 12.8 MiB (13,420,493 bytes) |
-| ABI | `arm64-v8a` only |
-| Requires | Android 8.0 (API 26) or newer |
-| SHA-256 | `703e28afa55e38c2271e7924a7ae161ae7ba0612e537aea29465a26369281987` |
+| Item     | Value                                                                  |
+| -------- | ---------------------------------------------------------------------- |
+| Version  | **1.0.2** (versionCode 102)                                            |
+| File     | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](apk/ruruDown-1.0.2-arm64-v8a.apk) |
+| Size     | 12.8 MiB (13,420,493 bytes)                                            |
+| ABI      | `arm64-v8a` only                                                       |
+| Requires | Android 8.0 (API 26) or newer                                          |
+| SHA-256  | `703e28afa55e38c2271e7924a7ae161ae7ba0612e537aea29465a26369281987`     |
 
 ### Signature
 
@@ -74,6 +74,9 @@ reports exactly which step is failing.
 Defaults to `Download/ruruDown`. Change it in **Settings → Export folder** through the
 system directory picker. Folders outside `Download` may additionally require the
 all-files-access permission in system settings.
+
+> We recommend changing the export directory to a location other than the `Download` folder, as in some system versions, media files in the `Download` folder may not free up storage space after deletion.
+> This is not an issue with ruruDown, but a flaw in the system itself. The occupied space will be released after the **device is restarted**.
 
 ## What it does
 
