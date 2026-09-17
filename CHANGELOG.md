@@ -3,6 +3,21 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
+## v1.0.3 — 2026-09-17
+
+- Support for the international Bilibili app (`com.bilibili.app.in`): cached videos in
+  either app are found automatically and merged into the same library. The cache folder
+  structure is identical, so nothing else changes.
+- Updated the release signing key (rotation).
+
+<details><summary>简体中文</summary>
+
+- 支持国际版 Bilibili 客户端（`com.bilibili.app.in`）：两个应用的缓存都会被自动识别
+  并合并进同一个媒体库。缓存目录结构一致，其余行为不变。
+- 轮换了发布签名密钥。
+
+</details>
+
 ## v1.0.2 — 2026-08-26
 
 - Search bar on the media library and audio pages (title / uploader / BV id / filename).

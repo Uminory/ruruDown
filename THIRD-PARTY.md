@@ -2,7 +2,7 @@
 
 English · [简体中文](docs/THIRD-PARTY.zh-CN.md) · [日本語](docs/THIRD-PARTY.ja.md)
 
-ruruDown 1.0.2 (arm64-v8a) bundles the components listed below. Except for FFmpeg,
+ruruDown 1.0.3 (arm64-v8a) bundles the components listed below. Except for FFmpeg,
 they are all licensed under Apache License 2.0 or MIT. Both licenses permit
 closed-source distribution provided that the copyright and license notices are
 retained — this file serves as that notice.

@@ -2,7 +2,7 @@
 
 **ruruDown** — 将 bilibili 缓存视频导出为普通的 mp4 / m4a / xml
 
-[![版本](https://img.shields.io/badge/version-1.0.2-blue)](../CHANGELOG.md)
+[![版本](https://img.shields.io/badge/version-1.0.3-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#系统要求)
 [![许可](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.zh-CN.md)
 [![架构](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#系统要求)
@@ -29,12 +29,12 @@ ruruDown 把 bilibili 客户端**已经缓存到本机**的视频导出为普通
 
 | 项目      | 值                                                                         |
 | ------- | ------------------------------------------------------------------------- |
-| 版本      | **1.0.2**（versionCode 102）                                                |
-| 文件      | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](../apk/ruruDown-1.0.2-arm64-v8a.apk) |
-| 大小      | 12.8 MiB（13,420,493 字节）                                                   |
+| 版本      | **1.0.3**（versionCode 103）                                                |
+| 文件      | [`apk/ruruDown-1.0.3-arm64-v8a.apk`](../apk/ruruDown-1.0.3-arm64-v8a.apk) |
+| 大小      | 12.8 MiB（13,432,713 字节）                                                   |
 | 架构      | 仅 `arm64-v8a`                                                             |
 | 系统要求    | Android 8.0（API 26）或更高                                                    |
-| SHA-256 | `84f949c107f26dc8458574f6138b0b54776b479d097af5d93fddd641cc12a812`        |
+| SHA-256 | `0d7fd2ffe17a58944975aa67b74906c61a50760afdd81b52dc7e57e0918ea64b`        |
 
 ### 签名
 
@@ -42,7 +42,7 @@ APK Signature Scheme **v2 + v3**，4096-bit RSA。签名证书指纹
 （**证书**的 SHA-256，不是 APK 文件的 SHA-256）：
 
 ```
-f6fd5f1b610fd8b7c45740955fe6d93ef54e6739a7e9841a2659bbcaae7cb7fe
+d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
 ```
 
 覆盖安装时如果系统提示签名不一致，说明不是这里发布的。
@@ -50,7 +50,7 @@ f6fd5f1b610fd8b7c45740955fe6d93ef54e6739a7e9841a2659bbcaae7cb7fe
 ### 校验下载
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.2-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.3-arm64-v8a.apk.sha256
 ```
 
 ## 前置条件：Shizuku
@@ -77,7 +77,8 @@ bilibili 的缓存目录位于另一个应用的私有目录，普通权限无�
 
 ## 功能
 
-- 扫描缓存视频，可按时长、大小、时间排序，并显示封面、UP 主、画质、分 P 信息。
+- 扫描缓存视频（国内版与国际版 Bilibili 客户端的缓存都会自动识别并合并入库），
+  可按时长、大小、时间排序，并显示封面、UP 主、画质、分 P 信息。
 - 导出视频 `.mp4`（音视频流复制，不重编码，画质与缓存完全一致），导出完成后立即推给
   系统媒体库，相册当场就能认出来，不用等重启或者系统的定时扫描。
 - 导出音频 `.m4a`。

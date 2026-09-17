@@ -2,7 +2,7 @@
 
 **ruruDown** — export bilibili's cached videos to plain mp4 / m4a / xml
 
-[![Version](https://img.shields.io/badge/version-1.0.2-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.3-blue)](CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#requirements)
 [![License](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#requirements)
@@ -32,12 +32,12 @@ straight from [`apk/`](apk/) in this repository.
 
 | Item     | Value                                                                  |
 | -------- | ---------------------------------------------------------------------- |
-| Version  | **1.0.2** (versionCode 102)                                            |
-| File     | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](apk/ruruDown-1.0.2-arm64-v8a.apk) |
-| Size     | 12.8 MiB (13,420,493 bytes)                                            |
+| Version  | **1.0.3** (versionCode 103)                                            |
+| File     | [`apk/ruruDown-1.0.3-arm64-v8a.apk`](apk/ruruDown-1.0.3-arm64-v8a.apk) |
+| Size     | 12.8 MiB (13,432,713 bytes)                                            |
 | ABI      | `arm64-v8a` only                                                       |
 | Requires | Android 8.0 (API 26) or newer                                          |
-| SHA-256  | `84f949c107f26dc8458574f6138b0b54776b479d097af5d93fddd641cc12a812`     |
+| SHA-256  | `0d7fd2ffe17a58944975aa67b74906c61a50760afdd81b52dc7e57e0918ea64b`    |
 
 ### Signature
 
@@ -45,7 +45,7 @@ APK Signature Scheme **v2 + v3**, 4096-bit RSA. Signing certificate fingerprint
 (SHA-256 of the *certificate*, not of the APK file):
 
 ```
-f6fd5f1b610fd8b7c45740955fe6d93ef54e6739a7e9841a2659bbcaae7cb7fe
+d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
 ```
 
 If Android reports a signature mismatch on upgrade, that APK did not come from here.
@@ -53,7 +53,7 @@ If Android reports a signature mismatch on upgrade, that APK did not come from h
 ### Verify the download
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.2-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.3-arm64-v8a.apk.sha256
 ```
 
 ## Prerequisite: Shizuku
@@ -80,8 +80,9 @@ all-files-access permission in system settings.
 
 ## What it does
 
-- Scans cached videos — sortable by duration / size / time, with cover, uploader,
-  quality and part information.
+- Scans cached videos (caches from both the domestic and international Bilibili
+  clients are auto-detected and merged into one library) — sortable by duration /
+  size / time, with cover, uploader, quality and part information.
 - Exports video as `.mp4` (audio and video stream copy, no re-encoding, quality
   identical to the cache), and hands it straight to the system media index so it shows
   up in the gallery without waiting for a reboot or a scheduled scan.
