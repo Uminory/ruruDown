@@ -2,7 +2,7 @@
 
 **ruruDown** — bilibili のキャッシュ済み動画を通常の mp4 / m4a / xml として書き出す
 
-[![バージョン](https://img.shields.io/badge/version-1.0.2-blue)](../CHANGELOG.md)
+[![バージョン](https://img.shields.io/badge/version-1.0.3-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#必要環境)
 [![ライセンス](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.ja.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#必要環境)
@@ -31,12 +31,12 @@ APK は [Releases ページ](https://github.com/Uminory/ruruDown/releases)、ま
 
 | 項目      | 値                                                                         |
 | ------- | ------------------------------------------------------------------------- |
-| バージョン   | **1.0.2**（versionCode 102）                                                |
-| ファイル    | [`apk/ruruDown-1.0.2-arm64-v8a.apk`](../apk/ruruDown-1.0.2-arm64-v8a.apk) |
-| サイズ     | 12.8 MiB（13,420,493 バイト）                                                  |
+| バージョン   | **1.0.3**（versionCode 103）                                                |
+| ファイル    | [`apk/ruruDown-1.0.3-arm64-v8a.apk`](../apk/ruruDown-1.0.3-arm64-v8a.apk) |
+| サイズ     | 12.8 MiB（13,432,713 バイト）                                                  |
 | ABI     | `arm64-v8a` のみ                                                            |
 | 必要環境    | Android 8.0（API 26）以上                                                     |
-| SHA-256 | `84f949c107f26dc8458574f6138b0b54776b479d097af5d93fddd641cc12a812`        |
+| SHA-256 | `0d7fd2ffe17a58944975aa67b74906c61a50760afdd81b52dc7e57e0918ea64b`        |
 
 ### 署名
 
@@ -44,7 +44,7 @@ APK Signature Scheme **v2 + v3**、4096-bit RSA。署名証明書のフィンガ
 （**証明書**の SHA-256。APK ファイルの SHA-256 ではありません）：
 
 ```
-f6fd5f1b610fd8b7c45740955fe6d93ef54e6739a7e9841a2659bbcaae7cb7fe
+d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
 ```
 
 アップグレード時に署名の不一致が表示された場合、その APK はここで公開されたものでは
@@ -53,7 +53,7 @@ f6fd5f1b610fd8b7c45740955fe6d93ef54e6739a7e9841a2659bbcaae7cb7fe
 ### ダウンロードの検証
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.2-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.3-arm64-v8a.apk.sha256
 ```
 
 ## 前提条件：Shizuku
@@ -81,7 +81,8 @@ Shizuku がない場合でもアプリは起動しますが、キャッシュは
 
 ## 機能
 
-- キャッシュされた動画をスキャンし、長さ・サイズ・日時で並べ替え。カバー画像、投稿者、
+- キャッシュされた動画をスキャン（国内版・国際版 bilibili クライアントのキャッシュを
+  自動認識して同じライブラリに統合）、長さ・サイズ・日時で並べ替え。カバー画像、投稿者、
   画質、パート情報を表示。
 - 動画を `.mp4` として書き出し（音声・映像ストリームコピー、再エンコードなし、画質は
   キャッシュと完全一致）。書き出し後すぐシステムのメディアインデックスに登録するので、
