@@ -2,7 +2,7 @@
 
 **ruruDown** — bilibili のキャッシュ済み動画を通常の mp4 / m4a / xml として書き出す
 
-[![バージョン](https://img.shields.io/badge/version-1.0.3-blue)](../CHANGELOG.md)
+[![バージョン](https://img.shields.io/badge/version-1.0.4--beta.1-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#必要環境)
 [![ライセンス](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.ja.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#必要環境)
@@ -31,12 +31,12 @@ APK は [Releases ページ](https://github.com/Uminory/ruruDown/releases)、ま
 
 | 項目      | 値                                                                         |
 | ------- | ------------------------------------------------------------------------- |
-| バージョン   | **1.0.3**（versionCode 103）                                                |
-| ファイル    | [`apk/ruruDown-1.0.3-arm64-v8a.apk`](../apk/ruruDown-1.0.3-arm64-v8a.apk) |
-| サイズ     | 12.8 MiB（13,432,713 バイト）                                                  |
+| バージョン   | **1.0.4-beta.1**（versionCode 104）                                                |
+| ファイル    | [`apk/ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk`](../apk/ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk) |
+| サイズ     | 12.9 MiB（13,517,897 バイト）                                                  |
 | ABI     | `arm64-v8a` のみ                                                            |
 | 必要環境    | Android 8.0（API 26）以上                                                     |
-| SHA-256 | `0d7fd2ffe17a58944975aa67b74906c61a50760afdd81b52dc7e57e0918ea64b`        |
+| SHA-256 | `0af52ad39402ffdf4a3ac58927f6a932656b301b363885644649a758de05c365`        |
 
 ### 署名
 
@@ -53,7 +53,7 @@ d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
 ### ダウンロードの検証
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.3-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk.sha256
 ```
 
 ## 前提条件：Shizuku
@@ -82,8 +82,8 @@ Shizuku がない場合でもアプリは起動しますが、キャッシュは
 ## 機能
 
 - キャッシュされた動画をスキャン（国内版・国際版 bilibili クライアントのキャッシュを
-  自動認識して同じライブラリに統合）、長さ・サイズ・日時で並べ替え。カバー画像、投稿者、
-  画質、パート情報を表示。
+  自動認識して同じライブラリに統合。変更版クライアント向けのスキャンパス追加にも対応）。
+  長さ・サイズ・日時で並べ替え。カバー画像、投稿者、画質、パート情報を表示。
 - 動画を `.mp4` として書き出し（音声・映像ストリームコピー、再エンコードなし、画質は
   キャッシュと完全一致）。書き出し後すぐシステムのメディアインデックスに登録するので、
   再起動や定期スキャンを待たずにギャラリーに現れます。
@@ -91,7 +91,8 @@ Shizuku がない場合でもアプリは起動しますが、キャッシュは
 - 弾幕を `.xml` として書き出し（bilibili XML 形式、プレイヤーで直接読み込み可能）。
 - バッチエクスポートキュー。フォアグラウンドサービス＋通知で進捗表示し、画面を離れても
   継続します。
-- 内蔵プレイヤー：動画は横向き全画面、音声はミニプレイヤーバー。
+- 内蔵プレイヤー：動画は横向き全画面、音声はミニプレイヤーバー、弾幕オーバーレイ
+  （プレイヤーのツールバーで切替、**設定 → 弾幕設定**でスタイル調整）。
 - 音声ページで長押しして複数選択し、一括削除。
 - UI 言語：English / 日本語 / 简体中文 / 繁體中文。システム設定に従うか手動で指定可能。
 

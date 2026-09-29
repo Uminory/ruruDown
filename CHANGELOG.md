@@ -3,6 +3,23 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
+## v1.0.4-beta.1 — 2026-09-27
+
+- Custom scan paths (**Settings → Scan paths**): the cache folder of a modified or
+  third-party bilibili client can be added alongside the built-in ones.
+- In-player XML danmaku overlay, powered by a built-in engine (zero new dependencies):
+  tap the toolbar button to toggle, long-press for the quick style panel; persistent
+  defaults live in **Settings → Danmaku**.
+
+<details><summary>简体中文</summary>
+
+- 自定义扫描路径（**设置 → 扫描路径**）：可将修改版 / 第三方 Bilibili 客户端的缓存
+  目录加入扫描，与内置路径并存。
+- 内置播放器新增 XML 弹幕叠加层：自研引擎，零新增依赖。工具条按钮点击开关、
+  长按呼出快捷样式面板，默认值在**设置 → 弹幕设定**持久化。
+
+</details>
+
 ## v1.0.3 — 2026-09-17
 
 - Support for the international Bilibili app (`com.bilibili.app.in`): cached videos in

@@ -2,7 +2,7 @@
 
 **ruruDown** — export bilibili's cached videos to plain mp4 / m4a / xml
 
-[![Version](https://img.shields.io/badge/version-1.0.3-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.4--beta.1-blue)](CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#requirements)
 [![License](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#requirements)
@@ -32,12 +32,12 @@ straight from [`apk/`](apk/) in this repository.
 
 | Item     | Value                                                                  |
 | -------- | ---------------------------------------------------------------------- |
-| Version  | **1.0.3** (versionCode 103)                                            |
-| File     | [`apk/ruruDown-1.0.3-arm64-v8a.apk`](apk/ruruDown-1.0.3-arm64-v8a.apk) |
-| Size     | 12.8 MiB (13,432,713 bytes)                                            |
+| Version  | **1.0.4-beta.1** (versionCode 104)                                          |
+| File     | [`apk/ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk`](apk/ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk) |
+| Size     | 12.9 MiB (13,517,897 bytes)                                            |
 | ABI      | `arm64-v8a` only                                                       |
 | Requires | Android 8.0 (API 26) or newer                                          |
-| SHA-256  | `0d7fd2ffe17a58944975aa67b74906c61a50760afdd81b52dc7e57e0918ea64b`    |
+| SHA-256  | `0af52ad39402ffdf4a3ac58927f6a932656b301b363885644649a758de05c365`    |
 
 ### Signature
 
@@ -53,7 +53,7 @@ If Android reports a signature mismatch on upgrade, that APK did not come from h
 ### Verify the download
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.3-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk.sha256
 ```
 
 ## Prerequisite: Shizuku
@@ -81,8 +81,9 @@ all-files-access permission in system settings.
 ## What it does
 
 - Scans cached videos (caches from both the domestic and international Bilibili
-  clients are auto-detected and merged into one library) — sortable by duration /
-  size / time, with cover, uploader, quality and part information.
+  clients are auto-detected and merged into one library, plus custom scan paths for
+  modified clients) — sortable by duration / size / time, with cover, uploader,
+  quality and part information.
 - Exports video as `.mp4` (audio and video stream copy, no re-encoding, quality
   identical to the cache), and hands it straight to the system media index so it shows
   up in the gallery without waiting for a reboot or a scheduled scan.
@@ -90,7 +91,9 @@ all-files-access permission in system settings.
 - Exports danmaku as `.xml` (bilibili XML format, loadable by players).
 - Batch export queue backed by a foreground service with notification progress; keeps
   running when you leave the screen.
-- Built-in player: full-screen landscape video, mini player bar for audio.
+- Built-in player: full-screen landscape video, mini player bar for audio, and an
+  XML danmaku overlay (toggle from the player toolbar, styled in **Settings →
+  Danmaku**).
 - Long-press on the audio page to multi-select and batch delete.
 - UI languages: English / 日本語 / 简体中文 / 繁體中文, following the system or set manually.
 
