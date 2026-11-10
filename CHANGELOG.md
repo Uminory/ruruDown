@@ -3,6 +3,31 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
+## v1.0.4-beta.2 — 2026-11-10
+
+- Add a Clip trimming tab with independent player, millisecond time inputs and a
+  focus-aware Current time button. Stream-copy MP4 or audio-only M4A clips, with
+  actual boundaries shown in the export queue.
+- Prefer recognized local MP4 inputs, falling back to the Bilibili cache when needed.
+- Track successful exports in a persistent private index; preserve clean title-based
+  filenames and keep clip exports separate from full-video completion marks.
+- Offer verified asset migration when switching export folders and protect stale
+  selections and directory operations.
+- Show clip processing, actual save progress, completed bars and output sizes.
+- Improve export failure cleanup and reliability. Internal versionCode: 105.
+
+<details><summary>简体中文</summary>
+
+- 新增“片段裁切”标签，播放器独立于标签切换；支持毫秒时间输入和随输入焦点启用的
+  “当前时间”按钮，可无损导出 MP4 或仅音频 M4A，队列显示实际导出范围。
+- 优先使用已识别的本地 MP4，不可用时回退 Bilibili 缓存。
+- 使用私有持久索引识别成功导出的资产；文件名保持纯净标题，片段不计作完整视频已导出。
+- 切换导出目录时可一键校验迁移旧资产，保护旧选择和目录操作。
+- 补齐片段处理中、实际保存进度、完成进度条和文件大小显示。
+- 改善导出失败清理及可靠性。内部版本号 versionCode 为 105。
+
+</details>
+
 ## v1.0.4-beta.1 — 2026-09-27
 
 - Custom scan paths (**Settings → Scan paths**): the cache folder of a modified or

@@ -2,7 +2,7 @@
 
 **ruruDown** — export bilibili's cached videos to plain mp4 / m4a / xml
 
-[![Version](https://img.shields.io/badge/version-1.0.4--beta.1-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.4--beta.2-blue)](CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#requirements)
 [![License](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#requirements)
@@ -32,16 +32,16 @@ straight from [`apk/`](apk/) in this repository.
 
 | Item     | Value                                                                  |
 | -------- | ---------------------------------------------------------------------- |
-| Version  | **1.0.4-beta.1** (versionCode 104)                                          |
-| File     | [`apk/ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk`](apk/ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk) |
-| Size     | 12.9 MiB (13,517,897 bytes)                                            |
+| Version  | **1.0.4-beta.2** (versionCode 105)                                          |
+| File     | [`apk/ruruDown-1.0.4-beta.2-arm64-v8a.apk`](apk/ruruDown-1.0.4-beta.2-arm64-v8a.apk) |
+| Size     | 13.0 MiB (13,632,205 bytes)                                            |
 | ABI      | `arm64-v8a` only                                                       |
 | Requires | Android 8.0 (API 26) or newer                                          |
-| SHA-256  | `0af52ad39402ffdf4a3ac58927f6a932656b301b363885644649a758de05c365`    |
+| SHA-256  | `4eec14910c5847d8a4006d48c5cca711079298d70b777ee3bd6045accfa12973`    |
 
 ### Signature
 
-APK Signature Scheme **v2 + v3**, 4096-bit RSA. Signing certificate fingerprint
+APK Signature Scheme **v2 + v3**, 2048-bit RSA. Signing certificate fingerprint
 (SHA-256 of the *certificate*, not of the APK file):
 
 ```
@@ -53,7 +53,7 @@ If Android reports a signature mismatch on upgrade, that APK did not come from h
 ### Verify the download
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4-beta.2-arm64-v8a.apk.sha256
 ```
 
 ## Prerequisite: Shizuku
@@ -66,8 +66,8 @@ over a remote file descriptor rather than by streaming bytes across Binder.
 2. Open ruruDown, tap **Authorize** on the home screen, and allow the Shizuku prompt.
 3. Return to the home screen and tap **Rescan**.
 
-Without Shizuku the app still launches but finds nothing; **Settings → Diagnostics**
-reports exactly which step is failing.
+Scanning and cache-based export require Shizuku authorization. Clips from a recognized
+local MP4 can be exported without Shizuku. **Settings → Diagnostics** reports access problems.
 
 ## Export folder
 
@@ -89,6 +89,10 @@ all-files-access permission in system settings.
   up in the gallery without waiting for a reboot or a scheduled scan.
 - Exports audio as `.m4a`.
 - Exports danmaku as `.xml` (bilibili XML format, loadable by players).
+- Trim clips with millisecond time inputs and the player’s Current time button. Prefer
+  recognized local MP4 files, with cache fallback; export video or audio-only clips.
+- Keep successful export records across cache clearing, with clean filenames and verified
+  asset migration when changing the export folder.
 - Batch export queue backed by a foreground service with notification progress; keeps
   running when you leave the screen.
 - Built-in player: full-screen landscape video, mini player bar for audio, and an
@@ -101,7 +105,8 @@ all-files-access permission in system settings.
 
 The app contains no networking code at all (FFmpeg itself is built with
 `--disable-network`). No accounts, no analytics, no crash reporting. Everything stays on
-device, and **Settings → Clear local cache** wipes the index database and thumbnails.
+device. **Settings → Clear local cache** wipes the media scan cache and thumbnails;
+successful export records are retained so existing exports remain recognizable.
 
 ## Licensing
 

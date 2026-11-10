@@ -2,7 +2,7 @@
 
 **ruruDown** — bilibili のキャッシュ済み動画を通常の mp4 / m4a / xml として書き出す
 
-[![バージョン](https://img.shields.io/badge/version-1.0.4--beta.1-blue)](../CHANGELOG.md)
+[![バージョン](https://img.shields.io/badge/version-1.0.4--beta.2-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#必要環境)
 [![ライセンス](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.ja.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#必要環境)
@@ -31,16 +31,16 @@ APK は [Releases ページ](https://github.com/Uminory/ruruDown/releases)、ま
 
 | 項目      | 値                                                                         |
 | ------- | ------------------------------------------------------------------------- |
-| バージョン   | **1.0.4-beta.1**（versionCode 104）                                                |
-| ファイル    | [`apk/ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk`](../apk/ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk) |
-| サイズ     | 12.9 MiB（13,517,897 バイト）                                                  |
+| バージョン   | **1.0.4-beta.2**（versionCode 105）                                                |
+| ファイル    | [`apk/ruruDown-1.0.4-beta.2-arm64-v8a.apk`](../apk/ruruDown-1.0.4-beta.2-arm64-v8a.apk) |
+| サイズ     | 13.0 MiB（13,632,205 バイト）                                                  |
 | ABI     | `arm64-v8a` のみ                                                            |
 | 必要環境    | Android 8.0（API 26）以上                                                     |
-| SHA-256 | `0af52ad39402ffdf4a3ac58927f6a932656b301b363885644649a758de05c365`        |
+| SHA-256 | `4eec14910c5847d8a4006d48c5cca711079298d70b777ee3bd6045accfa12973`        |
 
 ### 署名
 
-APK Signature Scheme **v2 + v3**、4096-bit RSA。署名証明書のフィンガープリント
+APK Signature Scheme **v2 + v3**、2048-bit RSA。署名証明書のフィンガープリント
 （**証明書**の SHA-256。APK ファイルの SHA-256 ではありません）：
 
 ```
@@ -53,7 +53,7 @@ d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
 ### ダウンロードの検証
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.4-beta.1-danmaku-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4-beta.2-arm64-v8a.apk.sha256
 ```
 
 ## 前提条件：Shizuku
@@ -67,8 +67,8 @@ bilibili のキャッシュは別アプリのプライベートディレクト�
 2. ruruDown を開き、ホーム画面で**認証**をタップし、Shizuku のダイアログで許可します。
 3. ホーム画面に戻り、**再スキャン**をタップします。
 
-Shizuku がない場合でもアプリは起動しますが、キャッシュは検出されません。
-**設定 → 診断**で、どの段階で失敗しているかを確認できます。
+スキャンとキャッシュからの書き出しには Shizuku の許可が必要です。認識済みのローカル MP4
+からのクリップ書き出しは Shizuku なしでも利用できます。アクセスの問題は**設定 → 診断**で確認できます。
 
 ## エクスポート先フォルダ
 
@@ -89,6 +89,9 @@ Shizuku がない場合でもアプリは起動しますが、キャッシュは
   再起動や定期スキャンを待たずにギャラリーに現れます。
 - 音声を `.m4a` として書き出し。
 - 弾幕を `.xml` として書き出し（bilibili XML 形式、プレイヤーで直接読み込み可能）。
+- ミリ秒単位の時刻入力とプレイヤーの「現在時刻」ボタンでクリップを切り出し。
+  認識済みのローカル MP4 を優先し、利用できない場合はキャッシュへ切り替えます。音声のみも選択可能。
+- 成功した書き出し記録はキャッシュ消去後も保持。読みやすいファイル名と、保存先変更時の検証付き移行に対応。
 - バッチエクスポートキュー。フォアグラウンドサービス＋通知で進捗表示し、画面を離れても
   継続します。
 - 内蔵プレイヤー：動画は横向き全画面、音声はミニプレイヤーバー、弾幕オーバーレイ
@@ -100,8 +103,8 @@ Shizuku がない場合でもアプリは起動しますが、キャッシュは
 
 本アプリにはネットワーク関連のコードが一切含まれていません（FFmpeg 自体も
 `--disable-network` でビルドされています）。アカウント、解析、クラッシュレポートは
-ありません。すべてのデータは端末内に留まり、インデックスデータベースとサムネイルは
-**設定 → ローカルキャッシュを消去**でいつでも削除できます。
+ありません。すべてのデータは端末内に留まります。**設定 → ローカルキャッシュを消去**は
+メディアのスキャンキャッシュとサムネイルを削除します。既存の書き出しを識別できるよう、成功した書き出し記録は保持します。
 
 ## ライセンス
 
