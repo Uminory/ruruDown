@@ -22,7 +22,7 @@ lib/arm64-v8a/librurumux.so    ← ruruDown's own glue layer, which only calls t
 |---|---|
 | Release | FFmpeg **7.1.5** |
 | Branch | `release/7.1` |
-| Commit | `9a4bb2c579a16b0469759743d6917d9e8e3cb8c6` (2026-08-11) |
+| Commit | `9a4bb2c579a16b0469759743d6917d9e8e3cb8c6` (2026-08-15) |
 | Upstream | https://git.ffmpeg.org/ffmpeg.git · https://github.com/FFmpeg/FFmpeg |
 | ABI | `arm64-v8a`, Android API 26, NDK r28 (28.2.13676358) |
 

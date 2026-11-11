@@ -23,7 +23,7 @@ lib/arm64-v8a/librurumux.so    ← ruruDown 独自のグルーレイヤー。上
 |---|---|
 | リリース | FFmpeg **7.1.5** |
 | ブランチ | `release/7.1` |
-| コミット | `9a4bb2c579a16b0469759743d6917d9e8e3cb8c6` (2026-08-11) |
+| コミット | `9a4bb2c579a16b0469759743d6917d9e8e3cb8c6` (2026-08-15) |
 | アップストリーム | https://git.ffmpeg.org/ffmpeg.git · https://github.com/FFmpeg/FFmpeg |
 | ABI | `arm64-v8a`, Android API 26, NDK r28 (28.2.13676358) |
 

@@ -2,7 +2,7 @@
 
 **ruruDown** — export bilibili's cached videos to plain mp4 / m4a / xml
 
-[![Version](https://img.shields.io/badge/version-1.0.4--beta.2-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.4-blue)](CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#requirements)
 [![License](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#requirements)
@@ -15,8 +15,8 @@ English · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md
 
 ruruDown exports videos that the bilibili Android client has **already cached on your
 device** into plain `mp4` / `m4a` / `xml` files. It downloads nothing, uploads nothing,
-and never writes to the cache folder — it reads once and stream-copies the result out,
-so the export is bit-identical to what was cached.
+and never writes to the cache folder. It preserves encoded audio/video through stream
+copy, without re-encoding.
 
 > **This is a distribution-only repository.** It holds the APK, its documentation, and
 > the material required by the LGPL for the bundled FFmpeg libraries. The application's
@@ -32,12 +32,12 @@ straight from [`apk/`](apk/) in this repository.
 
 | Item     | Value                                                                  |
 | -------- | ---------------------------------------------------------------------- |
-| Version  | **1.0.4-beta.2** (versionCode 105)                                          |
-| File     | [`apk/ruruDown-1.0.4-beta.2-arm64-v8a.apk`](apk/ruruDown-1.0.4-beta.2-arm64-v8a.apk) |
-| Size     | 13.0 MiB (13,632,205 bytes)                                            |
+| Version  | **1.0.4** (versionCode 106)                                          |
+| File     | [`apk/ruruDown-1.0.4-arm64-v8a.apk`](apk/ruruDown-1.0.4-arm64-v8a.apk) |
+| Size     | 4.4 MiB (4,597,645 bytes)                                            |
 | ABI      | `arm64-v8a` only                                                       |
 | Requires | Android 8.0 (API 26) or newer                                          |
-| SHA-256  | `4eec14910c5847d8a4006d48c5cca711079298d70b777ee3bd6045accfa12973`    |
+| SHA-256  | `08bea1923c1e4717e838683a74a33ff9dcce88e76d894b229b612780af1a96f6`    |
 
 ### Signature
 
@@ -53,7 +53,7 @@ If Android reports a signature mismatch on upgrade, that APK did not come from h
 ### Verify the download
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.4-beta.2-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4-arm64-v8a.apk.sha256
 ```
 
 ## Prerequisite: Shizuku
@@ -71,12 +71,17 @@ local MP4 can be exported without Shizuku. **Settings → Diagnostics** reports 
 
 ## Export folder
 
-Defaults to `Download/ruruDown`. Change it in **Settings → Export folder** through the
-system directory picker. Folders outside `Download` may additionally require the
-all-files-access permission in system settings.
+Defaults to `Download/ruruDown`. Use **Settings → Export folder** to select a public
+folder on the device or removable storage through the system directory picker.
+Only the system external-storage provider is supported; cloud storage, app-private
+folders and the `Android` subtree cannot be export targets. The app does not request
+all-files access. Android 8–10 asks for legacy storage permission when the default
+folder needs it; a SAF-selected public folder uses its directory grant instead.
 
-> We recommend changing the export directory to a location other than the `Download` folder, as in some system versions, media files in the `Download` folder may not free up storage space after deletion.
-> This is not an issue with ruruDown, but a flaw in the system itself. The occupied space will be released after the **device is restarted**.
+Selecting the same physical folder through another access method preserves verified
+asset ownership without copying the files. Interrupted writes use recorded staging
+files; system timeouts and unresponsive work stop automatically, with the reason in
+the export queue.
 
 ## What it does
 
@@ -95,10 +100,14 @@ all-files-access permission in system settings.
   asset migration when changing the export folder.
 - Batch export queue backed by a foreground service with notification progress; keeps
   running when you leave the screen.
-- Built-in player: full-screen landscape video, mini player bar for audio, and an
-  XML danmaku overlay (toggle from the player toolbar, styled in **Settings →
-  Danmaku**).
+- Built-in player: portrait full screen for tall videos, landscape for square or wide
+  videos, and a mini player bar for audio. Audio focus and headset disconnection are
+  handled by the system player; pressing play after completion replays from the start.
+- XML danmaku uses the entire player area, including black bars (toggle from the
+  player toolbar, styled in **Settings → Danmaku**). Paused rendering is demand-driven;
+  malformed or over-budget playback XML is silently disabled. Raw XML export is unaffected.
 - Long-press on the audio page to multi-select and batch delete.
+- Keep the library, audio and settings scroll positions when returning from another page or switching tabs.
 - UI languages: English / 日本語 / 简体中文 / 繁體中文, following the system or set manually.
 
 ## Privacy

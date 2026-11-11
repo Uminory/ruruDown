@@ -3,28 +3,113 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
-## v1.0.4-beta.2 — 2026-11-10
+## v1.0.4 — 2026-11-11
 
-- Add a Clip trimming tab with independent player, millisecond time inputs and a
-  focus-aware Current time button. Stream-copy MP4 or audio-only M4A clips, with
-  actual boundaries shown in the export queue.
-- Prefer recognized local MP4 inputs, falling back to the Bilibili cache when needed.
-- Track successful exports in a persistent private index; preserve clean title-based
-  filenames and keep clip exports separate from full-video completion marks.
-- Offer verified asset migration when switching export folders and protect stale
-  selections and directory operations.
-- Show clip processing, actual save progress, completed bars and output sizes.
-- Improve export failure cleanup and reliability. Internal versionCode: 105.
+Stable release of the 1.0.4 preview series. Internal versionCode: **106**;
+uses the existing release signing certificate.
+
+- **Clip export:** mark a time range in the new Clip trimming tab and stream-copy
+  MP4 or audio-only M4A. The player stays independent of tab changes; millisecond
+  inputs and a focus-aware Current time button help select boundaries. Recognized
+  local MP4 is preferred, with cache fallback; the queue shows save progress,
+  completed size and actual boundaries. Video starts remain keyframe-dependent.
+- **Exported assets and folders:** recognize registered files by URI and metadata,
+  keep title-based filenames, and offer verified migration after folder changes.
+  Retain registrations when access methods refer to the same public folder.
+  Home badges remain full-MP4-only; audio/XML marks stay in details.
+- **Safer storage:** preserve old exports until replacement is verified, recover
+  recorded staging files conservatively, protect scans and stale delete selections,
+  and check private staging space. Export destinations are verified public storage;
+  legacy storage permission handling is improved.
+- **More resilient tasks:** handle service failures, timeouts and unresponsive work
+  with automatic stopping and cleanup; keep item failures isolated in the queue.
+- **Playback and danmaku:** audio focus, headset-disconnection pause and replay after
+  ending; portrait full screen for tall videos; danmaku across the whole player,
+  including black bars. Paused rendering and XML resource use are bounded.
+- **Performance and navigation:** optimized and obfuscated Release code, unused
+  resource shrinking, cached list computations, incremental asset refresh, less
+  repeated folder IO and off-main-thread detail lookups. Release danmaku data when
+  leaving details and preserve library/audio/settings scroll positions.
+- **Polish:** consistent concise interface, diagnostic and license notices across
+  English, Simplified Chinese, Traditional Chinese and Japanese; updated release
+  documents and download checksums.
 
 <details><summary>简体中文</summary>
 
-- 新增“片段裁切”标签，播放器独立于标签切换；支持毫秒时间输入和随输入焦点启用的
-  “当前时间”按钮，可无损导出 MP4 或仅音频 M4A，队列显示实际导出范围。
-- 优先使用已识别的本地 MP4，不可用时回退 Bilibili 缓存。
-- 使用私有持久索引识别成功导出的资产；文件名保持纯净标题，片段不计作完整视频已导出。
-- 切换导出目录时可一键校验迁移旧资产，保护旧选择和目录操作。
-- 补齐片段处理中、实际保存进度、完成进度条和文件大小显示。
-- 改善导出失败清理及可靠性。内部版本号 versionCode 为 105。
+1.0.4 系列稳定版，内部版本号 **106**，沿用原发布签名。
+
+- **片段导出**：新增“片段裁切”标签、毫秒时间输入与跟随焦点启用的“当前时间”按钮，
+  播放器不随标签切换重建。优先使用已识别本地 MP4，必要时回退缓存；流复制导出 MP4
+  或纯音频 M4A，队列显示保存进度、完成体积及实际范围。视频起点仍受关键帧限制。
+- **资产与目录**：使用私有索引和文件 URI/元数据核对已导出资产，文件名保留纯净标题；
+  更换目录可一键校验迁移，同目录不同访问方式保留登记。首页只标记完整 MP4，音频/XML
+  仍仅在详情标记，片段不计为整片。
+- **存储可靠性**：覆盖前保留旧文件，核验新副本后再处理原件，保守恢复有记录的暂存；
+  加强扫描、过期删除选择与私有暂存空间预检。仅允许已确认的公共存储，补齐旧系统授权。
+- **任务恢复**：服务异常、超时或长时间无响应时自动停止并清理，单项失败不阻塞后续任务。
+- **播放器与弹幕**：补齐音频焦点、拔耳机暂停及结束重播；竖屏源使用竖屏全屏，弹幕覆盖
+  黑边；暂停后按需绘制，限制异常 XML 开销，不影响原始弹幕导出。
+- **性能与导航**：启用 Release 优化、混淆及资源裁剪，复用列表计算、增量刷新资产，减少
+  目录 IO，详情后备查询移出主线程；退出详情释放弹幕，切页或返回保留首页/音频/设置位置。
+- **文本与文档**：同步简体中文、繁体中文、英文、日文的界面、诊断和许可说明，整理发行
+  文档、更新日志及下载校验信息。
+
+</details>
+
+<details><summary>繁體中文</summary>
+
+1.0.4 系列穩定版，內部版本號 **106**，沿用原發行簽章。
+
+- **片段匯出**：新增裁切分頁、毫秒時間輸入及依焦點啟用的「目前時間」按鈕，切換分頁
+  保留播放器。優先使用已識別的本機 MP4，必要時回退快取；串流複製匯出 MP4 或純音訊
+  M4A，佇列顯示儲存進度、檔案大小及實際範圍。視訊起點仍受關鍵影格限制。
+- **資產與目錄**：以私有索引及 URI/中繼資料核對已匯出檔案，保留純標題檔名；切換目錄
+  可驗證遷移，同目錄不同存取方式保留登記。首頁只標記完整 MP4，音訊/XML 僅在詳情標記。
+- **儲存可靠性**：驗證新副本前保留舊檔，保守復原已登記暫存，加強掃描、刪除確認及
+  暫存空間預檢；限用已確認的公用儲存空間，改善舊系統授權。
+- **任務復原**：服務異常、逾時或長時間無回應時自動停止並清理，單項失敗不阻擋後續任務。
+- **播放與彈幕**：音訊焦點、耳機斷線暫停、結束重播、直式影片直式全螢幕；彈幕包含黑邊，
+  暫停後按需繪製並限制異常 XML 資源用量，不影響原始 XML 匯出。
+- **效能與導覽**：Release 最佳化、混淆與資源縮減，重用清單運算、增量核對資產、減少
+  目錄 IO；離開詳情釋放彈幕，返回或切換首頁/音訊/設定時保留捲動位置。
+- **文字與文件**：同步四種語言的介面、診斷和授權說明，更新發行文件及校驗資訊。
+
+</details>
+
+<details><summary>日本語</summary>
+
+1.0.4 系列の安定版です。内部 versionCode は **106**、従来の署名を継続します。
+
+- **クリップ書き出し**：専用タブ、ミリ秒入力、入力欄のフォーカスに連動する現在時刻
+  ボタンを追加。タブ切り替えでもプレーヤーを維持します。認識済みのローカル MP4 を
+  優先し、必要時はキャッシュを使用。再エンコードせず MP4／音声のみの M4A を出力し、
+  キューに保存進捗・サイズ・実際の範囲を表示します。映像の開始点はキーフレームに依存します。
+- **ファイルとフォルダー**：非公開の索引と URI／メタデータで照合し、タイトルのみの
+  ファイル名を維持。フォルダー変更時に検証付き移行を選べ、同じ場所のアクセス方式変更も
+  登録を保持します。ホームの完了表示は全編 MP4 のみ、音声／XML は詳細画面のみです。
+- **ストレージ保護**：新しい出力の検証まで既存ファイルを保持し、記録済み一時ファイルを
+  慎重に復旧。スキャン・削除確認・一時領域の空き容量確認と旧 Android の権限処理を改善。
+  出力先は確認済みの共有ストレージに限定します。
+- **タスクの復旧**：サービス異常、タイムアウト、長時間の無応答で自動停止と後始末を行い、
+  失敗した項目が後続タスクを妨げないようにします。
+- **再生と弾幕**：音声フォーカス、イヤホン切断時の一時停止、終了後の再再生、縦長動画の
+  縦画面全画面に対応。黒帯にも弾幕を表示し、一時停止中の描画と XML の資源消費を抑えます。
+- **性能と画面状態**：Release の最適化・難読化・リソース削減、一覧計算の再利用と差分照合、
+  フォルダー IO の削減。詳細を離れると弾幕を解放し、主要画面のスクロール位置を保持します。
+- **文言と文書**：4 言語の画面・診断・ライセンス表記を整理し、配布文書とチェックサムを更新。
+
+</details>
+
+## v1.0.4-beta.2 — 2026-11-10
+
+- Preview of clip trimming with local-MP4 preference, persistent exported-asset
+  recognition, verified folder migration and clip queue progress. Internal versionCode: 105.
+- Subsequent preview maintenance is consolidated into the stable 1.0.4 entry above.
+
+<details><summary>简体中文</summary>
+
+- 预览片段裁切、本地 MP4 优先、持久资产识别、目录校验迁移和片段队列进度，内部版本号 105。
+- 后续预览维护改进统一归入上方 1.0.4 稳定版条目。
 
 </details>
 

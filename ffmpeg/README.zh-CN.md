@@ -20,7 +20,7 @@ lib/arm64-v8a/librurumux.so    ← ruruDown 自己的胶水层，仅调用以上
 |---|---|
 | 发布版本 | FFmpeg **7.1.5** |
 | 分支 | `release/7.1` |
-| Commit | `9a4bb2c579a16b0469759743d6917d9e8e3cb8c6` (2026-08-11) |
+| Commit | `9a4bb2c579a16b0469759743d6917d9e8e3cb8c6` (2026-08-15) |
 | 上游 | https://git.ffmpeg.org/ffmpeg.git · https://github.com/FFmpeg/FFmpeg |
 | ABI | `arm64-v8a`, Android API 26, NDK r28 (28.2.13676358) |
 
