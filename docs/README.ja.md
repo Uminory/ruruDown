@@ -1,8 +1,8 @@
 <div align="center">
 
-**ruruDown** — bilibili のキャッシュ済み動画を通常の mp4 / m4a / xml として書き出す
+**ruruDown** — bilibili のキャッシュ済み動画を通常の mp4 / m4a / xml / srt / txt として書き出す
 
-[![バージョン](https://img.shields.io/badge/version-1.0.4-blue)](../CHANGELOG.md)
+[![バージョン](https://img.shields.io/badge/version-1.0.4.1-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#必要環境)
 [![ライセンス](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.ja.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#必要環境)
@@ -14,7 +14,7 @@
 ---
 
 ruruDown は、bilibili クライアントが**端末にすでにキャッシュ済み**の動画を、通常の
-`mp4` / `m4a` / `xml` ファイルとして書き出します。ダウンロードもアップロードも行わず、
+`mp4` / `m4a` / `xml` / `srt` / `txt` ファイルとして書き出します。ダウンロードもアップロードも行わず、
 キャッシュフォルダへ書き込むこともありません。ストリームコピーで映像・音声の圧縮データを
 保持し、再エンコードは行いません。
 
@@ -31,12 +31,12 @@ APK は [Releases ページ](https://github.com/Uminory/ruruDown/releases)、ま
 
 | 項目      | 値                                                                         |
 | ------- | ------------------------------------------------------------------------- |
-| バージョン   | **1.0.4**（versionCode 106）                                                |
-| ファイル    | [`apk/ruruDown-1.0.4-arm64-v8a.apk`](../apk/ruruDown-1.0.4-arm64-v8a.apk) |
-| サイズ     | 4.4 MiB（4,597,645 バイト）                                                  |
+| バージョン   | **1.0.4.1**（versionCode 107）                                                |
+| ファイル    | [`apk/ruruDown-1.0.4.1-arm64-v8a.apk`](../apk/ruruDown-1.0.4.1-arm64-v8a.apk) |
+| サイズ     | 4.4 MiB（4,618,297 バイト）                                                  |
 | ABI     | `arm64-v8a` のみ                                                            |
 | 必要環境    | Android 8.0（API 26）以上                                                     |
-| SHA-256 | `08bea1923c1e4717e838683a74a33ff9dcce88e76d894b229b612780af1a96f6`        |
+| SHA-256 | `6c3f04b1522c6de90eaa26147b46bc3604a74ae1dd58e182cd33a8233744efdc`        |
 
 ### 署名
 
@@ -53,7 +53,7 @@ d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
 ### ダウンロードの検証
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.4-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4.1-arm64-v8a.apk.sha256
 ```
 
 ## 前提条件：Shizuku
@@ -93,6 +93,8 @@ Android 8–10 の既定フォルダーでは必要時にストレージ権限�
   再起動や定期スキャンを待たずにギャラリーに現れます。
 - 音声を `.m4a` として書き出し。
 - 弾幕を `.xml` として書き出し（bilibili XML 形式、プレイヤーで直接読み込み可能）。
+- キャッシュ字幕を検出した場合のみ詳細に字幕出力を表示し、`.srt`／本文のみの `.txt` を動画と同名で書き出せます。
+- 動画と同じフォルダーにある同名 `.srt` を CC ボタンで表示。字幕の出力履歴は不要で、字幕の異常は動画再生へ影響しません。
 - ミリ秒単位の時刻入力とプレイヤーの「現在時刻」ボタンでクリップを切り出し。
   認識済みのローカル MP4 を優先し、利用できない場合はキャッシュへ切り替えます。音声のみも選択可能。
 - 成功した書き出し記録はキャッシュ消去後も保持。読みやすいファイル名と、保存先変更時の検証付き移行に対応。

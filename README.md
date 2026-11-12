@@ -1,8 +1,8 @@
 <div align="center">
 
-**ruruDown** — export bilibili's cached videos to plain mp4 / m4a / xml
+**ruruDown** — export bilibili's cached videos to plain mp4 / m4a / xml / srt / txt
 
-[![Version](https://img.shields.io/badge/version-1.0.4-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.4.1-blue)](CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#requirements)
 [![License](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#requirements)
@@ -14,7 +14,7 @@ English · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md
 ---
 
 ruruDown exports videos that the bilibili Android client has **already cached on your
-device** into plain `mp4` / `m4a` / `xml` files. It downloads nothing, uploads nothing,
+device** into plain `mp4` / `m4a` / `xml` / `srt` / `txt` files. It downloads nothing, uploads nothing,
 and never writes to the cache folder. It preserves encoded audio/video through stream
 copy, without re-encoding.
 
@@ -32,12 +32,12 @@ straight from [`apk/`](apk/) in this repository.
 
 | Item     | Value                                                                  |
 | -------- | ---------------------------------------------------------------------- |
-| Version  | **1.0.4** (versionCode 106)                                          |
-| File     | [`apk/ruruDown-1.0.4-arm64-v8a.apk`](apk/ruruDown-1.0.4-arm64-v8a.apk) |
-| Size     | 4.4 MiB (4,597,645 bytes)                                            |
+| Version  | **1.0.4.1** (versionCode 107)                                          |
+| File     | [`apk/ruruDown-1.0.4.1-arm64-v8a.apk`](apk/ruruDown-1.0.4.1-arm64-v8a.apk) |
+| Size     | 4.4 MiB (4,618,297 bytes)                                            |
 | ABI      | `arm64-v8a` only                                                       |
 | Requires | Android 8.0 (API 26) or newer                                          |
-| SHA-256  | `08bea1923c1e4717e838683a74a33ff9dcce88e76d894b229b612780af1a96f6`    |
+| SHA-256  | `6c3f04b1522c6de90eaa26147b46bc3604a74ae1dd58e182cd33a8233744efdc`    |
 
 ### Signature
 
@@ -53,7 +53,7 @@ If Android reports a signature mismatch on upgrade, that APK did not come from h
 ### Verify the download
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.4-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4.1-arm64-v8a.apk.sha256
 ```
 
 ## Prerequisite: Shizuku
@@ -94,6 +94,8 @@ the export queue.
   up in the gallery without waiting for a reboot or a scheduled scan.
 - Exports audio as `.m4a`.
 - Exports danmaku as `.xml` (bilibili XML format, loadable by players).
+- Detects cached subtitles and offers independent `.srt` / plain `.txt` export in details, using the video filename.
+- Plays a same-name `.srt` beside the exported video with a CC switch; no export ownership check is required for subtitles. Subtitle failures stay isolated from video playback.
 - Trim clips with millisecond time inputs and the player’s Current time button. Prefer
   recognized local MP4 files, with cache fallback; export video or audio-only clips.
 - Keep successful export records across cache clearing, with clean filenames and verified

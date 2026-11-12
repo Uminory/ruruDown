@@ -3,6 +3,53 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
+## v1.0.4.1 — 2026-11-12
+
+Subtitle export and playback update. Internal versionCode: **107**;
+uses the existing release signing certificate.
+
+- Scan cached subtitle track names without reading their contents during library scanning. Preserve the existing catalog through a non-destructive database upgrade.
+- Show subtitle export in details only when cached tracks were found, with independent SRT and plain TXT options. Use the exported video's actual filename stem.
+- Add a CC switch for same-folder, same-name SRT playback, including externally supplied files; no subtitle ownership verification or selector is required. Parse and render subtitles separately from the video source, with resource limits and failure isolation.
+- With overwrite disabled, skip all same-name targets, including unregistered files and names reserved in the current batch, rather than creating numbered copies. Keep safe replacement protection when overwrite is enabled.
+- Retain full-MP4-only home badges. Subtitle output recognition belongs in details. ASS styling and MKV export are outside this version.
+
+<details><summary>简体中文</summary>
+
+字幕导出与播放更新，内部版本号 **107**，沿用原发布签名。
+
+- 扫描缓存字幕文件名，首页扫描不解析字幕正文；数据库增量升级保留旧媒体索引。
+- 仅扫描到字幕时在详情页显示字幕导出，内含独立 SRT / 纯 TXT 勾选项，文件主干跟随视频实际名称。
+- 播放器新增 CC 字幕开关，只读取同目录同名 SRT，外部放入的字幕也可使用，不要求资产登记；字幕解析和渲染与视频源隔离，并限制异常资源消耗。
+- 关闭覆盖时，目标同名统一跳过，包括未登记文件和批次中已预留的名称，不再编号另存；开启覆盖仍保留安全替换保护。
+- 首页仍只标记完整 MP4；字幕在详情标记。本版不含 ASS 样式或 MKV 导出。
+
+</details>
+
+<details><summary>繁體中文</summary>
+
+字幕匯出與播放更新，內部版本號 **107**，沿用原發行簽章。
+
+- 掃描快取字幕檔名，首頁掃描不解析正文；資料庫增量升級保留舊媒體索引。
+- 僅偵測到字幕時顯示詳情字幕匯出，內含獨立 SRT／純 TXT 選項，與影片實際檔名同名。
+- 播放器新增 CC 開關，只讀取同目錄同名 SRT，無需字幕資產登記；解析與繪製獨立於影片來源，並限制異常資源耗用。
+- 關閉覆寫時，同名目標一律略過，包含未登記檔案及本批次已預留名稱，不再編號另存；開啟覆寫仍保留安全替換。
+- 首頁僅標記完整 MP4，字幕於詳情標記。本版不含 ASS 樣式或 MKV 匯出。
+
+</details>
+
+<details><summary>日本語</summary>
+
+字幕出力と再生のアップデートです。内部 versionCode は **107**、従来の署名を継続します。
+
+- スキャン時はキャッシュ字幕のファイル名のみを取得し、本文は読み込みません。既存データを維持したままデータベースを更新します。
+- 字幕が見つかった場合のみ詳細画面に出力欄を表示。SRT／本文のみの TXT を個別に選択し、動画の実際のファイル名に合わせます。
+- 同じフォルダーの同名 SRT を表示する CC スイッチを追加。字幕の出力履歴や選択画面は不要です。解析・描画を動画ソースから分離し、資源使用量を制限します。
+- 上書き無効時は未登録ファイルや同バッチ内の予約名も含め同名をスキップし、連番コピーを作りません。上書き有効時の安全な置換を維持します。
+- ホームの完了表示は全編 MP4 のみ、字幕は詳細で表示。ASS スタイルと MKV 出力は含みません。
+
+</details>
+
 ## v1.0.4 — 2026-11-11
 
 Stable release of the 1.0.4 preview series. Internal versionCode: **106**;

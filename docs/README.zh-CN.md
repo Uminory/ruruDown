@@ -1,8 +1,8 @@
 <div align="center">
 
-**ruruDown** — 将 bilibili 缓存视频导出为普通的 mp4 / m4a / xml
+**ruruDown** — 将 bilibili 缓存视频导出为普通的 mp4 / m4a / xml / srt / txt
 
-[![版本](https://img.shields.io/badge/version-1.0.4-blue)](../CHANGELOG.md)
+[![版本](https://img.shields.io/badge/version-1.0.4.1-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#系统要求)
 [![许可](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.zh-CN.md)
 [![架构](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#系统要求)
@@ -13,7 +13,7 @@
 
 ---
 
-ruruDown 把 bilibili 客户端**已经缓存到本机**的视频导出为普通的 `mp4` / `m4a` / `xml`
+ruruDown 把 bilibili 客户端**已经缓存到本机**的视频导出为普通的 `mp4` / `m4a` / `xml` / `srt` / `txt`
 文件。不联网下载、不上传，也不改动缓存目录；通过流复制保留音视频编码数据，
 不重新编码。
 
@@ -29,12 +29,12 @@ ruruDown 把 bilibili 客户端**已经缓存到本机**的视频导出为普通
 
 | 项目      | 值                                                                         |
 | ------- | ------------------------------------------------------------------------- |
-| 版本      | **1.0.4**（versionCode 106）                                                |
-| 文件      | [`apk/ruruDown-1.0.4-arm64-v8a.apk`](../apk/ruruDown-1.0.4-arm64-v8a.apk) |
-| 大小      | 4.4 MiB（4,597,645 字节）                                                   |
+| 版本      | **1.0.4.1**（versionCode 107）                                                |
+| 文件      | [`apk/ruruDown-1.0.4.1-arm64-v8a.apk`](../apk/ruruDown-1.0.4.1-arm64-v8a.apk) |
+| 大小      | 4.4 MiB（4,618,297 字节）                                                   |
 | 架构      | 仅 `arm64-v8a`                                                             |
 | 系统要求    | Android 8.0（API 26）或更高                                                    |
-| SHA-256 | `08bea1923c1e4717e838683a74a33ff9dcce88e76d894b229b612780af1a96f6`        |
+| SHA-256 | `6c3f04b1522c6de90eaa26147b46bc3604a74ae1dd58e182cd33a8233744efdc`        |
 
 ### 签名
 
@@ -50,7 +50,7 @@ d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
 ### 校验下载
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.4-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4.1-arm64-v8a.apk.sha256
 ```
 
 ## 前置条件：Shizuku
@@ -85,6 +85,8 @@ bilibili 的缓存目录位于另一个应用的私有目录，普通权限无�
   系统媒体库，相册当场就能认出来，不用等重启或者系统的定时扫描。
 - 导出音频 `.m4a`。
 - 导出弹幕 `.xml`（bilibili XML 格式，播放器可直接加载）。
+- 扫描缓存字幕，详情页按需显示字幕导出，支持独立勾选 `.srt` / 纯文本 `.txt`，文件与视频同名。
+- 播放器通过 CC 开关显示视频同目录同名 `.srt`，不要求字幕有导出登记；字幕异常不会中断视频播放。
 - 片段裁切支持毫秒时间输入和播放器“当前时间”按钮，优先使用已识别的本地 MP4，
   不可用时回退缓存；可选择导出视频或仅音频片段。
 - 成功导出记录在清缓存后保留，使用纯净文件名；切换导出目录时可校验迁移原资产。
