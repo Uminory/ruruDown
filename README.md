@@ -14,14 +14,13 @@ English · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md
 ---
 
 ruruDown exports videos that the bilibili Android client has **already cached on your
-device** into plain `mp4` / `m4a` / `xml` / `srt` / `txt` files. It downloads nothing, uploads nothing,
-and never writes to the cache folder. It preserves encoded audio/video through stream
-copy, without re-encoding.
+device** into plain `mp4` / `m4a` / `xml` / `srt` / `txt` files. Exports are lossless —
+the quality is identical to the cache. It downloads nothing, uploads nothing, and never
+modifies the cache folder.
 
 > **This is a distribution-only repository.** It holds the APK, its documentation, and
-> the material required by the LGPL for the bundled FFmpeg libraries. The application's
-> own source code is not published — ruruDown is free but closed-source, see
-> [LICENSE](LICENSE.md).
+> the material required by the LGPL for the bundled FFmpeg libraries. ruruDown is free
+> but closed-source, see [LICENSE](LICENSE.md).
 
 ## Download
 
@@ -34,117 +33,74 @@ straight from [`apk/`](apk/) in this repository.
 | -------- | ---------------------------------------------------------------------- |
 | Version  | **1.0.4.2** (versionCode 108)                                          |
 | File     | [`apk/ruruDown-1.0.4.2-arm64-v8a.apk`](apk/ruruDown-1.0.4.2-arm64-v8a.apk) |
-| Size     | 4.4 MiB (4,645,753 bytes)                                            |
+| Size     | 4.4 MiB                                                                |
 | ABI      | `arm64-v8a` only                                                       |
-| Requires | Android 8.0 (API 26) or newer                                          |
-| SHA-256  | `09da6046708a296ad5db983f654fef93721fdaad6c3bd6b529193a2018d5ae42`    |
-
-### Signature
-
-APK Signature Scheme **v2 + v3**, 2048-bit RSA. Signing certificate fingerprint
-(SHA-256 of the *certificate*, not of the APK file):
-
-```
-d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
-```
-
-If Android reports a signature mismatch on upgrade, that APK did not come from here.
-
-### Verify the download
-
-```bash
-cd apk && sha256sum -c ruruDown-1.0.4.2-arm64-v8a.apk.sha256
-```
+| Requires | Android 8.0 or newer                                                   |
 
 ## Prerequisite: Shizuku
 
-The bilibili cache lives in another app's private directory, which normal permissions
-cannot reach. ruruDown reads it — read-only — through [Shizuku](https://shizuku.rikka.app/),
-over a remote file descriptor rather than by streaming bytes across Binder.
+The bilibili cache lives in another app's private folder, which normal permissions
+cannot reach. ruruDown reads it — read-only — through [Shizuku](https://shizuku.rikka.app/).
 
 1. Install and start Shizuku (via ADB, or the rootless method).
 2. Open ruruDown, tap **Authorize** on the home screen, and allow the Shizuku prompt.
 3. Return to the home screen and tap **Rescan**.
 
-Scanning and cache-based export require Shizuku authorization. Clips from a recognized
-local MP4 can be exported without Shizuku. **Settings → Diagnostics** reports access problems.
+Scanning and cache-based export require Shizuku authorization. Clips from a local MP4
+already on your device can be exported without Shizuku. **Settings → Diagnostics**
+reports access problems.
 
 ## Export folder
 
-Defaults to `Download/ruruDown`. Use **Settings → Export folder** to select a public
-folder on the device or removable storage through the system directory picker.
-Only the system external-storage provider is supported; cloud storage, app-private
-folders and the `Android` subtree cannot be export targets. The app does not request
-all-files access. Android 8–10 asks for legacy storage permission when the default
-folder needs it; a SAF-selected public folder uses its directory grant instead.
-
-Selecting the same physical folder through another access method preserves verified
-asset ownership without copying the files. Interrupted writes use recorded staging
-files; system timeouts and unresponsive work stop automatically, with the reason in
-the export queue.
+Defaults to `Download/ruruDown`. Use **Settings → Export folder** to pick any public
+folder on the device or removable storage. Cloud storage, app-private folders and the
+`Android` data subtree cannot be export targets. The app does not request all-files
+access.
 
 ## What it does
 
-- Scans cached videos (caches from both the domestic and international Bilibili
-  clients are auto-detected and merged into one library, plus custom scan paths for
-  modified clients) — sortable by duration / size / time, with cover, uploader,
-  quality and part information.
-- Exports video as `.mp4` (audio and video stream copy, no re-encoding, quality
-  identical to the cache), and hands it straight to the system media index so it shows
-  up in the gallery without waiting for a reboot or a scheduled scan.
+- Scans cached videos — caches from both the domestic and international Bilibili
+  clients are merged into one library, and custom scan paths cover modified clients.
+  Sort by duration / size / time; see cover, uploader, quality and part information.
+- Search the library and audio pages by title, uploader, BV id or filename.
+- Exports video as `.mp4` with no quality loss; it shows up in the gallery right away.
 - Exports audio as `.m4a`.
-- Expand **Properties** between detailed information and export controls to read actual media attributes. Probing starts only on expansion, prefers a recognized local MP4, and otherwise reads cached streams. Unchanged files reuse a bounded in-memory result cache.
+- Expand **Properties** in the details page to view the actual media attributes of a video.
 - Exports danmaku as `.xml` (bilibili XML format, loadable by players).
-- Detects cached subtitles and offers independent `.srt` / plain `.txt` export in details, using the video filename.
-- Plays a same-name `.srt` beside the exported video with a CC switch; no export ownership check is required for subtitles. Subtitle failures stay isolated from video playback.
-- Trim clips with millisecond time inputs and the player’s Current time button. Prefer
-  recognized local MP4 files, with cache fallback; export video or audio-only clips.
-- Keep successful export records across cache clearing, with clean filenames and verified
-  asset migration when changing the export folder.
-- Batch export queue backed by a foreground service with notification progress; keeps
-  running when you leave the screen.
-- Built-in player: portrait full screen for tall videos, landscape for square or wide
-  videos, and a mini player bar for audio. Audio focus and headset disconnection are
-  handled by the system player; pressing play after completion replays from the start.
-- XML danmaku uses the entire player area, including black bars (toggle from the
-  player toolbar, styled in **Settings → Danmaku**). Paused rendering is demand-driven;
-  malformed or over-budget playback XML is silently disabled. Raw XML export is unaffected.
+- Exports cached subtitles as `.srt` or plain `.txt`, named after the video.
+- Plays a same-name `.srt` beside the video with a CC switch — including subtitle files
+  you add yourself.
+- Trim clips with millisecond time inputs and the player's Current time button; export
+  video or audio-only clips.
+- Export records survive cache clearing, and changing the export folder keeps your
+  existing exports recognized.
+- Batch export queue with notification progress; keeps running when you leave the screen.
+- Built-in player: portrait full screen for tall videos, landscape for wide videos, and
+  a mini player bar for audio. Pauses when headphones disconnect; replays from the start
+  after finishing.
+- Danmaku overlay across the whole player, including black bars (toggle from the player
+  toolbar, styled in **Settings → Danmaku**).
 - Long-press on the audio page to multi-select and batch delete.
-- Keep the library, audio and settings scroll positions when returning from another page or switching tabs.
+- Remembers your scroll position in the library, audio and settings pages.
 - UI languages: English / 日本語 / 简体中文 / 繁體中文, following the system or set manually.
 
 ## Privacy
 
-The app contains no networking code at all (FFmpeg itself is built with
-`--disable-network`). No accounts, no analytics, no crash reporting. Everything stays on
-device. **Settings → Clear local cache** wipes the media scan cache and thumbnails;
-successful export records are retained so existing exports remain recognizable.
+The app has no networking at all. No accounts, no analytics, no crash reporting.
+Everything stays on device. **Settings → Clear local cache** wipes the media scan cache
+and thumbnails; export records are kept so existing exports remain recognizable.
 
 ## Licensing
 
 - **Application** — free but closed-source; commercial use and redistribution are
   prohibited. See [LICENSE](LICENSE.md).
 - **Third-party components** — see [THIRD-PARTY](THIRD-PARTY.md).
-- **FFmpeg** — used via dynamic linking under LGPL v2.1. License text, build script,
-  configuration and replacement instructions are in
-  [`ffmpeg/README.md`](ffmpeg/README.md) and
+- **FFmpeg** — used under LGPL v2.1. License text, build script and replacement
+  instructions are in [`ffmpeg/README.md`](ffmpeg/README.md) and
   [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt).
 
 Exported content belongs to its original authors — keep it for personal offline viewing
 and do not redistribute it.
-
-## Repository layout
-
-```
-├─ README.md            English documentation (canonical)
-├─ LICENSE.md           ruruDown's own licence
-├─ THIRD-PARTY.md       bundled third-party components and their licences
-├─ CHANGELOG.md         release history
-├─ apk/                 released APK + its .sha256 checksum
-├─ docs/                translations of the four documents above
-├─ licenses/            full licence texts (Apache-2.0, LGPL-2.1, MIT)
-└─ ffmpeg/              LGPL material: build script, configuration, prebuilt .so
-```
 
 ## Disclaimer
 
