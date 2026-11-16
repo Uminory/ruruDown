@@ -173,12 +173,12 @@ Internal versionCode: **106**.
 
 ## v1.0.1 — 2026-08-25
 
-- Improved performance, refreshed visuals and reduced the APK size.
+- Reworked the project: better performance, refreshed visuals, smaller APK.
 - Added the built-in player.
 
 <details><summary>简体中文</summary>
 
-- 提高了性能，改善了界面外观，缩小了安装包体积。
+- 重构了项目，提高了性能，改善了界面外观，缩小了安装包体积。
 - 增加了内置播放器。
 
 </details>
