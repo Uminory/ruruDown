@@ -14,9 +14,7 @@ English · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md
 ---
 
 ruruDown exports videos that the bilibili Android client has **already cached on your
-device** into plain `mp4` / `m4a` / `xml` / `srt` / `txt` files. Exports are lossless —
-the quality is identical to the cache. It downloads nothing, uploads nothing, and never
-modifies the cache folder.
+device** into plain `mp4` / `m4a` / `xml` / `srt` / `txt` files.
 
 > **This is a distribution-only repository.** It holds the APK, its documentation, and
 > the material required by the LGPL for the bundled FFmpeg libraries. ruruDown is free
@@ -39,10 +37,10 @@ straight from [`apk/`](apk/) in this repository.
 
 ## Prerequisite: Shizuku
 
-The bilibili cache lives in another app's private folder, which normal permissions
-cannot reach. ruruDown reads it — read-only — through [Shizuku](https://shizuku.rikka.app/).
+The bilibili cache lives in a private folder, which normal permissions cannot reach.
+ruruDown reads it — read-only — through [Shizuku](https://shizuku.rikka.app/).
 
-1. Install and start Shizuku (via ADB, or the rootless method).
+1. Install and start Shizuku.
 2. Open ruruDown, tap **Authorize** on the home screen, and allow the Shizuku prompt.
 3. Return to the home screen and tap **Rescan**.
 
@@ -53,42 +51,27 @@ reports access problems.
 ## Export folder
 
 Defaults to `Download/ruruDown`. Use **Settings → Export folder** to pick any public
-folder on the device or removable storage. Cloud storage, app-private folders and the
-`Android` data subtree cannot be export targets. The app does not request all-files
-access.
+folder on the device or removable storage.
 
 ## What it does
 
 - Scans cached videos — caches from both the domestic and international Bilibili
-  clients are merged into one library, and custom scan paths cover modified clients.
-  Sort by duration / size / time; see cover, uploader, quality and part information.
+  clients are merged into one library, and custom scan paths can be added.
 - Search the library and audio pages by title, uploader, BV id or filename.
-- Exports video as `.mp4` with no quality loss; it shows up in the gallery right away.
+- Exports video as `.mp4`.
 - Exports audio as `.m4a`.
 - Expand **Properties** in the details page to view the actual media attributes of a video.
-- Exports danmaku as `.xml` (bilibili XML format, loadable by players).
+- Exports danmaku as `.xml`
 - Exports cached subtitles as `.srt` or plain `.txt`, named after the video.
-- Plays a same-name `.srt` beside the video with a CC switch — including subtitle files
-  you add yourself.
-- Trim clips with millisecond time inputs and the player's Current time button; export
-  video or audio-only clips.
-- Export records survive cache clearing, and changing the export folder keeps your
-  existing exports recognized.
-- Batch export queue with notification progress; keeps running when you leave the screen.
-- Built-in player: portrait full screen for tall videos, landscape for wide videos, and
-  a mini player bar for audio. Pauses when headphones disconnect; replays from the start
-  after finishing.
-- Danmaku overlay across the whole player, including black bars (toggle from the player
-  toolbar, styled in **Settings → Danmaku**).
-- Long-press on the audio page to multi-select and batch delete.
-- Remembers your scroll position in the library, audio and settings pages.
-- UI languages: English / 日本語 / 简体中文 / 繁體中文, following the system or set manually.
+- Plays a same-name `.srt` beside the video with a CC switch.
+- Clip trimming can export video or audio-only clips.
+- Built-in player
+- Danmaku (styled in **Settings → Danmaku**).
 
 ## Privacy
 
-The app has no networking at all. No accounts, no analytics, no crash reporting.
-Everything stays on device. **Settings → Clear local cache** wipes the media scan cache
-and thumbnails; export records are kept so existing exports remain recognizable.
+The app has no networking at all. **Settings → Clear local cache** wipes the media scan
+cache and thumbnails; export records are kept.
 
 ## Licensing
 
