@@ -2,7 +2,7 @@
 
 **ruruDown** — bilibili のキャッシュ済み動画を通常の mp4 / m4a / xml / srt / txt として書き出す
 
-[![バージョン](https://img.shields.io/badge/version-1.0.4.1-blue)](../CHANGELOG.md)
+[![バージョン](https://img.shields.io/badge/version-1.0.4.2-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#必要環境)
 [![ライセンス](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.ja.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#必要環境)
@@ -31,12 +31,12 @@ APK は [Releases ページ](https://github.com/Uminory/ruruDown/releases)、ま
 
 | 項目      | 値                                                                         |
 | ------- | ------------------------------------------------------------------------- |
-| バージョン   | **1.0.4.1**（versionCode 107）                                                |
-| ファイル    | [`apk/ruruDown-1.0.4.1-arm64-v8a.apk`](../apk/ruruDown-1.0.4.1-arm64-v8a.apk) |
-| サイズ     | 4.4 MiB（4,618,297 バイト）                                                  |
+| バージョン   | **1.0.4.2**（versionCode 108）                                                |
+| ファイル    | [`apk/ruruDown-1.0.4.2-arm64-v8a.apk`](../apk/ruruDown-1.0.4.2-arm64-v8a.apk) |
+| サイズ     | 4.4 MiB（4,645,753 バイト）                                                  |
 | ABI     | `arm64-v8a` のみ                                                            |
 | 必要環境    | Android 8.0（API 26）以上                                                     |
-| SHA-256 | `6c3f04b1522c6de90eaa26147b46bc3604a74ae1dd58e182cd33a8233744efdc`        |
+| SHA-256 | `09da6046708a296ad5db983f654fef93721fdaad6c3bd6b529193a2018d5ae42`        |
 
 ### 署名
 
@@ -53,7 +53,7 @@ d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
 ### ダウンロードの検証
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.4.1-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4.2-arm64-v8a.apk.sha256
 ```
 
 ## 前提条件：Shizuku
@@ -92,6 +92,7 @@ Android 8–10 の既定フォルダーでは必要時にストレージ権限�
   キャッシュと完全一致）。書き出し後すぐシステムのメディアインデックスに登録するので、
   再起動や定期スキャンを待たずにギャラリーに現れます。
 - 音声を `.m4a` として書き出し。
+- 詳細情報と出力欄の間に、初期状態で折りたたまれた「プロパティ」を追加。展開時のみ実際のメディア情報を取得し、認識済みローカル MP4 を優先、なければキャッシュを使用。変更のないファイルはメモリー内の結果を再利用します。
 - 弾幕を `.xml` として書き出し（bilibili XML 形式、プレイヤーで直接読み込み可能）。
 - キャッシュ字幕を検出した場合のみ詳細に字幕出力を表示し、`.srt`／本文のみの `.txt` を動画と同名で書き出せます。
 - 動画と同じフォルダーにある同名 `.srt` を CC ボタンで表示。字幕の出力履歴は不要で、字幕の異常は動画再生へ影響しません。

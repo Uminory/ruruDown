@@ -2,7 +2,7 @@
 
 **ruruDown** — 将 bilibili 缓存视频导出为普通的 mp4 / m4a / xml / srt / txt
 
-[![版本](https://img.shields.io/badge/version-1.0.4.1-blue)](../CHANGELOG.md)
+[![版本](https://img.shields.io/badge/version-1.0.4.2-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#系统要求)
 [![许可](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.zh-CN.md)
 [![架构](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#系统要求)
@@ -29,12 +29,12 @@ ruruDown 把 bilibili 客户端**已经缓存到本机**的视频导出为普通
 
 | 项目      | 值                                                                         |
 | ------- | ------------------------------------------------------------------------- |
-| 版本      | **1.0.4.1**（versionCode 107）                                                |
-| 文件      | [`apk/ruruDown-1.0.4.1-arm64-v8a.apk`](../apk/ruruDown-1.0.4.1-arm64-v8a.apk) |
-| 大小      | 4.4 MiB（4,618,297 字节）                                                   |
+| 版本      | **1.0.4.2**（versionCode 108）                                                |
+| 文件      | [`apk/ruruDown-1.0.4.2-arm64-v8a.apk`](../apk/ruruDown-1.0.4.2-arm64-v8a.apk) |
+| 大小      | 4.4 MiB（4,645,753 字节）                                                   |
 | 架构      | 仅 `arm64-v8a`                                                             |
 | 系统要求    | Android 8.0（API 26）或更高                                                    |
-| SHA-256 | `6c3f04b1522c6de90eaa26147b46bc3604a74ae1dd58e182cd33a8233744efdc`        |
+| SHA-256 | `09da6046708a296ad5db983f654fef93721fdaad6c3bd6b529193a2018d5ae42`        |
 
 ### 签名
 
@@ -50,7 +50,7 @@ d54c27cffe944f903b49a1add77daa9a02a73b7476680003da574ef73c526a23
 ### 校验下载
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.4.1-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4.2-arm64-v8a.apk.sha256
 ```
 
 ## 前置条件：Shizuku
@@ -84,6 +84,7 @@ bilibili 的缓存目录位于另一个应用的私有目录，普通权限无�
 - 导出视频 `.mp4`（音视频流复制，不重编码，画质与缓存完全一致），导出完成后立即推给
   系统媒体库，相册当场就能认出来，不用等重启或者系统的定时扫描。
 - 导出音频 `.m4a`。
+- 视频详情的“详细信息”与“导出”之间新增默认折叠的“属性”。展开后才读取实际媒体参数，优先使用已识别本地 MP4，否则读取缓存分片；文件未变化时按需复用结果。
 - 导出弹幕 `.xml`（bilibili XML 格式，播放器可直接加载）。
 - 扫描缓存字幕，详情页按需显示字幕导出，支持独立勾选 `.srt` / 纯文本 `.txt`，文件与视频同名。
 - 播放器通过 CC 开关显示视频同目录同名 `.srt`，不要求字幕有导出登记；字幕异常不会中断视频播放。

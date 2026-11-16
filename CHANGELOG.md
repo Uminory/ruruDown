@@ -3,10 +3,39 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
+## v1.0.4.2 — 2026-11-16
+
+Internal versionCode: **108**.
+
+- Added video media properties detection.
+
+<details><summary>简体中文</summary>
+
+内部版本号 **108**。
+
+- 增加了视频属性检测功能。
+
+</details>
+
+<details><summary>繁體中文</summary>
+
+內部版本號 **108**。
+
+- 增加了視訊屬性偵測功能。
+
+</details>
+
+<details><summary>日本語</summary>
+
+内部 versionCode は **108**。
+
+- 動画プロパティ検出機能を追加。
+
+</details>
+
 ## v1.0.4.1 — 2026-11-12
 
-Subtitle export and playback update. Internal versionCode: **107**;
-uses the existing release signing certificate.
+Internal versionCode: **107**.
 
 - Scan cached subtitle track names without reading their contents during library scanning. Preserve the existing catalog through a non-destructive database upgrade.
 - Show subtitle export in details only when cached tracks were found, with independent SRT and plain TXT options. Use the exported video's actual filename stem.
@@ -16,7 +45,7 @@ uses the existing release signing certificate.
 
 <details><summary>简体中文</summary>
 
-字幕导出与播放更新，内部版本号 **107**，沿用原发布签名。
+内部版本号 **107**。
 
 - 扫描缓存字幕文件名，首页扫描不解析字幕正文；数据库增量升级保留旧媒体索引。
 - 仅扫描到字幕时在详情页显示字幕导出，内含独立 SRT / 纯 TXT 勾选项，文件主干跟随视频实际名称。
@@ -28,7 +57,7 @@ uses the existing release signing certificate.
 
 <details><summary>繁體中文</summary>
 
-字幕匯出與播放更新，內部版本號 **107**，沿用原發行簽章。
+內部版本號 **107**。
 
 - 掃描快取字幕檔名，首頁掃描不解析正文；資料庫增量升級保留舊媒體索引。
 - 僅偵測到字幕時顯示詳情字幕匯出，內含獨立 SRT／純 TXT 選項，與影片實際檔名同名。
@@ -40,7 +69,7 @@ uses the existing release signing certificate.
 
 <details><summary>日本語</summary>
 
-字幕出力と再生のアップデートです。内部 versionCode は **107**、従来の署名を継続します。
+内部 versionCode は **107** です。
 
 - スキャン時はキャッシュ字幕のファイル名のみを取得し、本文は読み込みません。既存データを維持したままデータベースを更新します。
 - 字幕が見つかった場合のみ詳細画面に出力欄を表示。SRT／本文のみの TXT を個別に選択し、動画の実際のファイル名に合わせます。

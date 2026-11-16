@@ -6,6 +6,9 @@ ruruDown uses FFmpeg for container handling and stream copy (`-c copy`) — neve
 re-encoding, so the exported quality is bit-identical to the cache. FFmpeg is used
 via **dynamic linking**; it is not statically linked, and its source is not modified.
 
+Media properties also use these libraries through public APIs, with bounded,
+read-only metadata probing. No separate FFprobe executable or decoders are bundled.
+
 ## Layout inside the APK
 
 ```

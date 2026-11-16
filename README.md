@@ -2,7 +2,7 @@
 
 **ruruDown** — export bilibili's cached videos to plain mp4 / m4a / xml / srt / txt
 
-[![Version](https://img.shields.io/badge/version-1.0.4.1-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.4.2-blue)](CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#requirements)
 [![License](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#requirements)
@@ -32,12 +32,12 @@ straight from [`apk/`](apk/) in this repository.
 
 | Item     | Value                                                                  |
 | -------- | ---------------------------------------------------------------------- |
-| Version  | **1.0.4.1** (versionCode 107)                                          |
-| File     | [`apk/ruruDown-1.0.4.1-arm64-v8a.apk`](apk/ruruDown-1.0.4.1-arm64-v8a.apk) |
-| Size     | 4.4 MiB (4,618,297 bytes)                                            |
+| Version  | **1.0.4.2** (versionCode 108)                                          |
+| File     | [`apk/ruruDown-1.0.4.2-arm64-v8a.apk`](apk/ruruDown-1.0.4.2-arm64-v8a.apk) |
+| Size     | 4.4 MiB (4,645,753 bytes)                                            |
 | ABI      | `arm64-v8a` only                                                       |
 | Requires | Android 8.0 (API 26) or newer                                          |
-| SHA-256  | `6c3f04b1522c6de90eaa26147b46bc3604a74ae1dd58e182cd33a8233744efdc`    |
+| SHA-256  | `09da6046708a296ad5db983f654fef93721fdaad6c3bd6b529193a2018d5ae42`    |
 
 ### Signature
 
@@ -53,7 +53,7 @@ If Android reports a signature mismatch on upgrade, that APK did not come from h
 ### Verify the download
 
 ```bash
-cd apk && sha256sum -c ruruDown-1.0.4.1-arm64-v8a.apk.sha256
+cd apk && sha256sum -c ruruDown-1.0.4.2-arm64-v8a.apk.sha256
 ```
 
 ## Prerequisite: Shizuku
@@ -93,6 +93,7 @@ the export queue.
   identical to the cache), and hands it straight to the system media index so it shows
   up in the gallery without waiting for a reboot or a scheduled scan.
 - Exports audio as `.m4a`.
+- Expand **Properties** between detailed information and export controls to read actual media attributes. Probing starts only on expansion, prefers a recognized local MP4, and otherwise reads cached streams. Unchanged files reuse a bounded in-memory result cache.
 - Exports danmaku as `.xml` (bilibili XML format, loadable by players).
 - Detects cached subtitles and offers independent `.srt` / plain `.txt` export in details, using the video filename.
 - Plays a same-name `.srt` beside the exported video with a CC switch; no export ownership check is required for subtitles. Subtitle failures stay isolated from video playback.
