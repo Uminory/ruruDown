@@ -3,6 +3,40 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
+## v1.0.4.3 — 2026-11-17
+
+Internal versionCode: **109**.
+
+- Fixed detection of video collections.
+- Improved the cache usage display.
+
+<details><summary>简体中文</summary>
+
+内部版本号 **109**。
+
+- 修复了合集视频的识别问题
+- 优化了缓存占用的显示效果
+
+</details>
+
+<details><summary>繁體中文</summary>
+
+內部版本號 **109**。
+
+- 修復了合集影片的識別問題
+- 優化了快取占用的顯示效果
+
+</details>
+
+<details><summary>日本語</summary>
+
+内部 versionCode は **109**。
+
+- コレクション動画の認識に関する問題を修正。
+- キャッシュ使用量の表示を改善。
+
+</details>
+
 ## v1.0.4.2 — 2026-11-16
 
 Internal versionCode: **108**.

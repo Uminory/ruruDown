@@ -2,7 +2,7 @@
 
 **ruruDown** — export bilibili's cached videos to plain mp4 / m4a / xml / srt / txt
 
-[![Version](https://img.shields.io/badge/version-1.0.4.2-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.4.3-blue)](CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#requirements)
 [![License](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#requirements)
@@ -29,8 +29,8 @@ straight from [`apk/`](apk/) in this repository.
 
 | Item     | Value                                                                  |
 | -------- | ---------------------------------------------------------------------- |
-| Version  | **1.0.4.2** (versionCode 108)                                          |
-| File     | [`apk/ruruDown-1.0.4.2-arm64-v8a.apk`](apk/ruruDown-1.0.4.2-arm64-v8a.apk) |
+| Version  | **1.0.4.3** (versionCode 109)                                          |
+| File     | [`apk/ruruDown-1.0.4.3-arm64-v8a.apk`](apk/ruruDown-1.0.4.3-arm64-v8a.apk) |
 | Size     | 4.4 MiB                                                                |
 | ABI      | `arm64-v8a` only                                                       |
 | Requires | Android 8.0 or newer                                                   |
@@ -57,6 +57,8 @@ folder on the device or removable storage.
 
 - Scans cached videos — caches from both the domestic and international Bilibili
   clients are merged into one library, and custom scan paths can be added.
+- Browse series and multi-part videos as collections.
+- View cache, export folder and device storage usage.
 - Search the library and audio pages by title, uploader, BV id or filename.
 - Exports video as `.mp4`.
 - Exports audio as `.m4a`.
@@ -65,12 +67,12 @@ folder on the device or removable storage.
 - Exports cached subtitles as `.srt` or plain `.txt`, named after the video.
 - Plays a same-name `.srt` beside the video with a CC switch.
 - Clip trimming can export video or audio-only clips.
-- Built-in player
+- Built-in player.
 - Danmaku (styled in **Settings → Danmaku**).
 
 ## Privacy
 
-The app has no networking at all. **Settings → Clear local cache** wipes the media scan
+Media is processed locally on your device. **Settings → Clear local cache** wipes the media scan
 cache and thumbnails; export records are kept.
 
 ## Licensing
