@@ -46,8 +46,8 @@ The essentials:
 --disable-jni --disable-mediacodec --disable-sdl2
 --enable-small
 --disable-everything, then re-enabled selectively:
-  demuxer   mov,matroska,flv,mp3,aac,flac,ogg
-  muxer     mp4,mov,ipod
+  demuxer   mov,matroska,flv,mp3,aac,flac,ogg,ass,srt
+  muxer     mp4,mov,ipod,matroska
   protocol  fd,file,pipe
   parser    h264,hevc,av1,vp9,aac,aac_latm,opus,flac,mpeg4video
   bsf       extract_extradata,h264_mp4toannexb,hevc_mp4toannexb,aac_adtstoasc,

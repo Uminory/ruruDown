@@ -1,8 +1,8 @@
 <div align="center">
 
-**ruruDown** — 将 bilibili 缓存视频导出为普通的 mp4 / m4a / xml / srt / txt
+**ruruDown** — 导出 bilibili 缓存视频，在本机浏览和播放
 
-[![版本](https://img.shields.io/badge/version-1.0.4.3-blue)](../CHANGELOG.md)
+[![版本](https://img.shields.io/badge/version-1.0.5-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#系统要求)
 [![许可](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.zh-CN.md)
 [![架构](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#系统要求)
@@ -13,8 +13,7 @@
 
 ---
 
-ruruDown 将 bilibili Android 客户端**已经缓存到本机**的视频导出为普通的
-`mp4` / `m4a` / `xml` / `srt` / `txt` 文件。
+ruruDown 可导出 bilibili Android 客户端已缓存到本机的视频，并在本地媒体库中浏览、播放已导出的文件。
 
 > **这是一个发布仓库。** 包含 APK、配套文档和随包 FFmpeg 库的 LGPL 材料。
 > ruruDown 免费闭源，详见 [LICENSE](LICENSE.zh-CN.md)。
@@ -28,9 +27,9 @@ ruruDown 将 bilibili Android 客户端**已经缓存到本机**的视频导出�
 
 | 项目 | 值 |
 | --- | --- |
-| 版本 | **1.0.4.3**（versionCode 109） |
-| 文件 | [`apk/ruruDown-1.0.4.3-arm64-v8a.apk`](../apk/ruruDown-1.0.4.3-arm64-v8a.apk) |
-| 大小 | 4.4 MiB |
+| 版本 | **1.0.5**（versionCode 110） |
+| 文件 | [`apk/ruruDown-1.0.5-arm64-v8a.apk`](../apk/ruruDown-1.0.5-arm64-v8a.apk) |
+| 大小 | 4.7 MiB |
 | 架构 | `arm64-v8a` |
 | 系统要求 | Android 8.0 或更高 |
 
@@ -42,7 +41,7 @@ ruruDown 将 bilibili Android 客户端**已经缓存到本机**的视频导出�
 2. 打开 ruruDown，在首页点击**授权**，并在 Shizuku 弹窗中允许。
 3. 回到首页，点击**重新扫描**。
 
-本地 MP4 支持直接裁切导出。访问问题可在**设置 → 诊断**中查看。
+已导出的 MP4 或 MKV 支持直接裁切导出。访问问题可在**设置 → 诊断**中查看。
 
 ## 导出目录
 
@@ -50,19 +49,12 @@ ruruDown 将 bilibili Android 客户端**已经缓存到本机**的视频导出�
 
 ## 功能
 
-- 扫描国内版和国际版 Bilibili 客户端的缓存视频，合并到同一媒体库，支持添加自定义扫描路径。
-- 支持番剧与多 P 合集浏览。
-- 查看缓存、导出目录和本机存储占用。
-- 媒体库和音频页支持按标题、UP 主、BV 号或文件名搜索。
-- 导出视频为 `.mp4`。
-- 导出音频为 `.m4a`。
-- 展开详情页的**属性**，查看视频的实际媒体参数。
-- 导出弹幕为 `.xml`。
-- 导出缓存字幕为 `.srt` 或纯文本 `.txt`，与视频同名。
-- 播放器通过 CC 开关显示视频旁的同名 `.srt` 字幕。
-- 片段裁切支持导出视频或纯音频片段。
-- 内置视频播放器。
-- 显示弹幕，可在**设置 → 弹幕设定**中调整样式。
+- 浏览国内版和国际版 bilibili 的缓存视频，支持番剧与多 P 合集。
+- 在本地媒体库浏览、搜索和管理已导出的文件。
+- 导出 MP4 视频、M4A 音频、XML 或 ASS 弹幕，以及 SRT、ASS 或 TXT 字幕。
+- 自定义 ASS 样式，选择视频、音频、字幕和弹幕轨封装为 MKV。
+- 内置播放器支持自动续播、全屏播放设置，以及独立的字幕和弹幕开关。
+- 裁切视频或音频片段，查看媒体属性和存储占用。
 
 ## 隐私
 

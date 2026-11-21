@@ -78,8 +78,8 @@ cd "$FFMPEG_SRC"
     --disable-jni --disable-mediacodec --disable-sdl2 \
     --enable-small \
     --disable-everything \
-    --enable-demuxer=mov,matroska,flv,mp3,aac,flac,ogg \
-    --enable-muxer=mp4,mov,ipod \
+    --enable-demuxer=mov,matroska,flv,mp3,aac,flac,ogg,ass,srt \
+    --enable-muxer=mp4,mov,ipod,matroska \
     --enable-protocol=fd,file,pipe \
     --enable-parser=h264,hevc,av1,vp9,aac,aac_latm,opus,flac,mpeg4video \
     --enable-bsf=extract_extradata,h264_mp4toannexb,hevc_mp4toannexb,aac_adtstoasc,av1_metadata,vp9_superframe,vp9_superframe_split

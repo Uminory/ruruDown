@@ -3,6 +3,40 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
+## v1.0.5 — 2026-11-21
+
+- Added a local media library for browsing and managing exports.
+- Added ASS styles and MKV export with selectable video, audio, subtitle and danmaku tracks.
+- Added automatic playback resume and fullscreen controls, and improved dense danmaku playback.
+- Made export options collapsible and improved export folder migration.
+
+<details><summary>简体中文</summary>
+
+- 新增本地媒体库，可浏览和管理已导出的文件。
+- 新增 ASS 样式和 MKV 封装，可选择视频、音频、字幕和弹幕轨。
+- 新增自动续播和全屏播放设置，优化密集弹幕显示。
+- 导出选项可折叠，提升了导出目录迁移的可靠性。
+
+</details>
+
+<details><summary>繁體中文</summary>
+
+- 新增本機媒體庫，可瀏覽及管理已匯出的檔案。
+- 新增 ASS 樣式與 MKV 封裝，可選擇影片、音訊、字幕及彈幕軌。
+- 新增自動續播及全螢幕播放設定，最佳化密集彈幕顯示。
+- 匯出選項可收合，提升了匯出資料夾移轉的可靠性。
+
+</details>
+
+<details><summary>日本語</summary>
+
+- 書き出したファイルを閲覧・管理できるローカルメディアライブラリーを追加しました。
+- ASS のスタイル設定と、映像・音声・字幕・弾幕のトラックを選べる MKV 書き出しを追加しました。
+- 続きからの再生と全画面の再生設定を追加し、弾幕が密集する場面の表示を改善しました。
+- 書き出しオプションを折りたためるようにし、出力フォルダーの移行の信頼性を改善しました。
+
+</details>
+
 ## v1.0.4.3 — 2026-11-17
 
 Internal versionCode: **109**.
