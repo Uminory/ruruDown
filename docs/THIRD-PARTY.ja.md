@@ -1,6 +1,6 @@
 # サードパーティコンポーネント
 
-ruruDown 1.0.5（arm64-v8a）には、以下のサードパーティコンポーネントが同梱されて
+ruruDown 1.0.6-beta.1（arm64-v8a）には、以下のサードパーティコンポーネントが同梱されて
 います。FFmpeg を除き、すべて Apache License 2.0 または MIT ライセンスの下で提供
 されています。どちらのライセンスも、著作権表示とライセンス通知を保持する限り、
 クローズドソースでの配布を許可します。本ファイルがその通知となります。
@@ -32,7 +32,7 @@ LGPL §6 に従って置き換え可能です。上記リンクのドキュメ�
 | androidx.documentfile | 1.1.0 | エクスポート先フォルダへの SAF アクセス | The Android Open Source Project |
 | Jetpack Compose (ui, ui-graphics, foundation, material3, tooling-preview) | BOM 2026.03.01 | UI ツールキット | The Android Open Source Project |
 | androidx.graphics:path (`libandroidx.graphics.path.so`) | 推移的依存関係 | Compose のパス補間 | The Android Open Source Project |
-| AndroidX Media3 (exoplayer, common) | 1.11.0 | 内蔵プレイヤー | The Android Open Source Project |
+| AndroidX Media3 (exoplayer, common, session) | 1.11.0 | 内蔵プレイヤー | The Android Open Source Project |
 | Guava（Media3 の推移的依存関係） | 33.7.2-android | コレクションとユーティリティ | Google LLC and Guava contributors |
 | Coil 3 (coil-compose) | 3.4.0 | サムネイルのデコードとキャッシュ | Coil Contributors |
 | Haze | 1.7.2 | ボトムバーとパネルのリアルタイムブラー | Chris Banes |

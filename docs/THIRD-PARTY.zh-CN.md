@@ -1,6 +1,6 @@
 # 第三方组件声明
 
-ruruDown 1.0.5（arm64-v8a）打包了下列第三方组件。除 FFmpeg 之外，其余组件均采用
+ruruDown 1.0.6-beta.1（arm64-v8a）打包了下列第三方组件。除 FFmpeg 之外，其余组件均采用
 Apache License 2.0 或 MIT 许可。这两种许可证均允许闭源分发，前提是保留版权与许可
 声明——本文件即为此声明。
 
@@ -30,7 +30,7 @@ Apache License 2.0 或 MIT 许可。这两种许可证均允许闭源分发，�
 | androidx.documentfile | 1.1.0 | 导出目录的 SAF 访问 | The Android Open Source Project |
 | Jetpack Compose (ui, ui-graphics, foundation, material3, tooling-preview) | BOM 2026.03.01 | 界面框架 | The Android Open Source Project |
 | androidx.graphics:path (`libandroidx.graphics.path.so`) | 传递依赖 | Compose 的路径解析 | The Android Open Source Project |
-| AndroidX Media3 (exoplayer, common) | 1.11.0 | 内置播放器 | The Android Open Source Project |
+| AndroidX Media3 (exoplayer, common, session) | 1.11.0 | 内置播放器 | The Android Open Source Project |
 | Guava（Media3 传递依赖） | 33.7.2-android | 集合与通用工具 | Google LLC and Guava contributors |
 | Coil 3 (coil-compose) | 3.4.0 | 封面解码与内存缓存 | Coil Contributors |
 | Haze | 1.7.2 | 底栏与面板的实时模糊 | Chris Banes |

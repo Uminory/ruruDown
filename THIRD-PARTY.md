@@ -2,7 +2,7 @@
 
 English · [简体中文](docs/THIRD-PARTY.zh-CN.md) · [日本語](docs/THIRD-PARTY.ja.md)
 
-ruruDown 1.0.5 (arm64-v8a) bundles the components listed below. Except for FFmpeg,
+ruruDown 1.0.6-beta.1 (arm64-v8a) bundles the components listed below. Except for FFmpeg,
 they are all licensed under Apache License 2.0 or MIT. Both licenses permit
 closed-source distribution provided that the copyright and license notices are
 retained — this file serves as that notice.
@@ -34,7 +34,7 @@ Full text: https://www.apache.org/licenses/LICENSE-2.0
 | androidx.documentfile | 1.1.0 | SAF folder access for export directory | The Android Open Source Project |
 | Jetpack Compose (ui, ui-graphics, foundation, material3, tooling-preview) | BOM 2026.03.01 | UI toolkit | The Android Open Source Project |
 | androidx.graphics:path (`libandroidx.graphics.path.so`) | Transitive | Path interpolation for Compose | The Android Open Source Project |
-| AndroidX Media3 (exoplayer, common) | 1.11.0 | Built-in player | The Android Open Source Project |
+| AndroidX Media3 (exoplayer, common, session) | 1.11.0 | Built-in player | The Android Open Source Project |
 | Guava (Media3 transitive dependency) | 33.7.2-android | Collections and utilities | Google LLC and Guava contributors |
 | Coil 3 (coil-compose) | 3.4.0 | Thumbnail decoding and caching | Coil Contributors |
 | Haze | 1.7.2 | Real-time blur for bottom bar and panels | Chris Banes |

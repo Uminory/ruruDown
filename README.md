@@ -2,7 +2,7 @@
 
 **ruruDown** — export bilibili's cached videos and manage them offline
 
-[![Version](https://img.shields.io/badge/version-1.0.5-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.6-beta.1-blue)](CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#requirements)
 [![License](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#requirements)
@@ -29,9 +29,9 @@ straight from [`apk/`](apk/) in this repository.
 
 | Item     | Value                                                                  |
 | -------- | ---------------------------------------------------------------------- |
-| Version  | **1.0.5** (versionCode 110)                                          |
-| File     | [`apk/ruruDown-1.0.5-arm64-v8a.apk`](apk/ruruDown-1.0.5-arm64-v8a.apk) |
-| Size     | 4.7 MiB                                                                |
+| Version  | **1.0.6-beta.1** (versionCode 111)                                          |
+| File     | [`apk/ruruDown-1.0.6-beta.1-arm64-v8a.apk`](apk/ruruDown-1.0.6-beta.1-arm64-v8a.apk) |
+| Size     | 5.2 MiB                                                                |
 | ABI      | `arm64-v8a` only                                                       |
 | Requires | Android 8.0 or newer                                                   |
 
@@ -54,7 +54,8 @@ folder on the device or removable storage.
 
 - Browse cached videos from both bilibili clients, including series and multi-part collections.
 - Browse, search and manage exported files in the local media library.
-- Export video as MP4, audio as M4A, danmaku as XML or ASS, and cached subtitles as SRT, ASS or TXT.
+- Export video as MP4, audio as M4A, danmaku as XML, PB or ASS, and cached subtitles as SRT, ASS or TXT.
+- Choose subtitle languages, export bilingual ASS subtitles, and listen in the background with a sleep timer.
 - Customize ASS styles and select video, audio, subtitle and danmaku tracks for MKV export.
 - Play videos in the app with automatic resume, fullscreen controls and separate subtitle and danmaku switches.
 - Trim video or audio clips, inspect media properties and check storage usage.

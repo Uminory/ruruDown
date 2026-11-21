@@ -3,7 +3,37 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
-## v1.0.5 — 2026-11-21
+## v1.0.6-beta.1 — 2026-11-21
+
+- Added multilingual subtitle selection, bilingual ASS and multiple MKV subtitle tracks.
+- Added XML and PB danmaku export, conversion and playback, with automatic export source selection.
+- Added background listening and an audio sleep timer.
+
+<details><summary>简体中文</summary>
+
+- 新增多语言字幕选择、双语 ASS 和 MKV 多字幕轨。
+- 支持导出、播放及互转 XML 和 PB 弹幕，导出时可自动选择来源。
+- 新增后台听音与定时关闭。
+
+</details>
+
+<details><summary>繁體中文</summary>
+
+- 新增多語言字幕選擇、雙語 ASS 與 MKV 多字幕軌。
+- 支援匯出、播放及互轉 XML 和 PB 彈幕，匯出時可自動選擇來源。
+- 新增背景收聽與睡眠計時器。
+
+</details>
+
+<details><summary>日本語</summary>
+
+- 多言語字幕の選択、二言語 ASS、MKV の複数字幕トラックに対応しました。
+- XML・PB 弾幕の再生、書き出し、相互変換に対応し、書き出し元を自動で選べます。
+- バックグラウンド再生とスリープタイマーを追加しました。
+
+</details>
+
+## v1.0.5
 
 - Added a local media library for browsing and managing exports.
 - Added ASS styles and MKV export with selectable video, audio, subtitle and danmaku tracks.
