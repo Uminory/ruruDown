@@ -2,7 +2,7 @@
 
 **ruruDown** — bilibili のキャッシュ済み動画を端末に書き出して管理
 
-[![バージョン](https://img.shields.io/badge/version-1.0.6-beta.1-blue)](../CHANGELOG.md)
+[![バージョン](https://img.shields.io/badge/version-1.0.6-beta.2-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#必要環境)
 [![ライセンス](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.ja.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#必要環境)
@@ -28,8 +28,8 @@ bilibili Android クライアントで端末にキャッシュ済みの動画を
 
 | 項目 | 値 |
 | --- | --- |
-| バージョン | **1.0.6-beta.1**（versionCode 111） |
-| ファイル | [`apk/ruruDown-1.0.6-beta.1-arm64-v8a.apk`](../apk/ruruDown-1.0.6-beta.1-arm64-v8a.apk) |
+| バージョン | **1.0.6-beta.2**（versionCode 112） |
+| ファイル | [`apk/ruruDown-1.0.6-beta.2-arm64-v8a.apk`](../apk/ruruDown-1.0.6-beta.2-arm64-v8a.apk) |
 | サイズ | 5.2 MiB |
 | ABI | `arm64-v8a` |
 | 必要環境 | Android 8.0 以上 |
@@ -54,6 +54,7 @@ bilibili Android クライアントで端末にキャッシュ済みの動画を
 - bilibili の国内版・国際版クライアントのキャッシュ動画や、シリーズ・複数パートの動画を閲覧できます。
 - 書き出したファイルをローカルメディアライブラリーで閲覧・検索・管理できます。
 - 動画は MP4、音声は M4A、弾幕は XML・PB・ASS、字幕は SRT・ASS・TXT に書き出せます。
+- 書き出しファイルを動画やシリーズごとに整理し、同じシリーズのエピソードを MKV に一括で書き出せます。
 - 字幕の言語選択、二言語 ASS の書き出し、バックグラウンド再生とスリープタイマーに対応。
 - ASS のスタイルを調整し、映像・音声・字幕・弾幕のトラックを選んで MKV に書き出せます。
 - 内蔵プレーヤーは続きからの再生、全画面の再生設定、字幕と弾幕の個別切り替えに対応します。

@@ -3,6 +3,36 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
+## v1.0.6-beta.2 — 2026-11-22
+
+- Organize exports in folders by video or collection.
+- Export selected episodes from a collection as MKV in one batch.
+- Improved recognition of exported files across folders.
+
+<details><summary>简体中文</summary>
+
+- 导出文件可按视频或合集归入子目录。
+- 支持批量导出同一合集的 MKV。
+- 提高了不同目录中已导出文件的识别可靠性。
+
+</details>
+
+<details><summary>繁體中文</summary>
+
+- 匯出檔案可依影片或合集整理至子目錄。
+- 支援批次匯出同一合集的 MKV。
+- 提升了不同目錄中已匯出檔案的辨識可靠性。
+
+</details>
+
+<details><summary>日本語</summary>
+
+- 書き出しファイルを動画やシリーズごとにフォルダーに整理できます。
+- 同じシリーズのエピソードを MKV に一括で書き出せます。
+- フォルダー内の書き出し済みファイルの認識を改善しました。
+
+</details>
+
 ## v1.0.6-beta.1 — 2026-11-21
 
 - Added multilingual subtitle selection, bilingual ASS and multiple MKV subtitle tracks.
