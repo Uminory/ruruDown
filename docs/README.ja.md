@@ -2,7 +2,7 @@
 
 **ruruDown** — bilibili のキャッシュ済み動画を端末に書き出して管理
 
-[![バージョン](https://img.shields.io/badge/version-1.0.6-beta.2-blue)](../CHANGELOG.md)
+[![バージョン](https://img.shields.io/badge/version-1.0.6-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#必要環境)
 [![ライセンス](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.ja.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#必要環境)
@@ -28,8 +28,8 @@ bilibili Android クライアントで端末にキャッシュ済みの動画を
 
 | 項目 | 値 |
 | --- | --- |
-| バージョン | **1.0.6-beta.2**（versionCode 112） |
-| ファイル | [`apk/ruruDown-1.0.6-beta.2-arm64-v8a.apk`](../apk/ruruDown-1.0.6-beta.2-arm64-v8a.apk) |
+| バージョン | **1.0.6**（versionCode 113） |
+| ファイル | [`apk/ruruDown-1.0.6-arm64-v8a.apk`](../apk/ruruDown-1.0.6-arm64-v8a.apk) |
 | サイズ | 5.2 MiB |
 | ABI | `arm64-v8a` |
 | 必要環境 | Android 8.0 以上 |

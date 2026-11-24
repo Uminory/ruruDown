@@ -2,7 +2,7 @@
 
 **ruruDown** — export bilibili's cached videos and manage them offline
 
-[![Version](https://img.shields.io/badge/version-1.0.6-beta.2-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.6-blue)](CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#requirements)
 [![License](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.md)
 [![ABI](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#requirements)
@@ -29,8 +29,8 @@ straight from [`apk/`](apk/) in this repository.
 
 | Item     | Value                                                                  |
 | -------- | ---------------------------------------------------------------------- |
-| Version  | **1.0.6-beta.2** (versionCode 112)                                          |
-| File     | [`apk/ruruDown-1.0.6-beta.2-arm64-v8a.apk`](apk/ruruDown-1.0.6-beta.2-arm64-v8a.apk) |
+| Version  | **1.0.6** (versionCode 113)                                          |
+| File     | [`apk/ruruDown-1.0.6-arm64-v8a.apk`](apk/ruruDown-1.0.6-arm64-v8a.apk) |
 | Size     | 5.2 MiB                                                                |
 | ABI      | `arm64-v8a` only                                                       |
 | Requires | Android 8.0 or newer                                                   |

@@ -3,6 +3,32 @@
 All notable changes to ruruDown, newest first. Version numbers match the APK's
 `versionName`.
 
+## v1.0.6 — 2026-11-24
+
+- Display more danmaku at once and optionally merge identical comments during playback or ASS export.
+- Improve export replacement and make danmaku counters more consistent after seeking.
+
+<details><summary>简体中文</summary>
+
+- 提高同屏弹幕上限，播放和 ASS 导出均可合并重复弹幕。
+- 改善导出覆盖和跳转后的弹幕计数表现。
+
+</details>
+
+<details><summary>繁體中文</summary>
+
+- 提高同屏彈幕上限，播放和 ASS 匯出均可合併重複彈幕。
+- 改善匯出覆蓋和跳轉後的彈幕計數表現。
+
+</details>
+
+<details><summary>日本語</summary>
+
+- 同時に表示できる弾幕数を増やし、再生時と ASS 書き出し時に同じ弾幕をまとめられるようにしました。
+- 書き出し時の上書きとシーク後の弾幕カウントを改善しました。
+
+</details>
+
 ## v1.0.6-beta.2 — 2026-11-22
 
 - Organize exports in folders by video or collection.
