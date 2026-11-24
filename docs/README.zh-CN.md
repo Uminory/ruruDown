@@ -2,7 +2,7 @@
 
 **ruruDown** — 导出 bilibili 缓存视频，在本机浏览和播放
 
-[![版本](https://img.shields.io/badge/version-1.0.6-blue)](../CHANGELOG.md)
+[![版本](https://img.shields.io/badge/version-1.0.6-beta.2-blue)](../CHANGELOG.md)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green)](#系统要求)
 [![许可](https://img.shields.io/badge/license-freeware%20(closed--source)-orange)](LICENSE.zh-CN.md)
 [![架构](https://img.shields.io/badge/ABI-arm64--v8a-lightgrey)](#系统要求)
@@ -27,8 +27,8 @@ ruruDown 可导出 bilibili Android 客户端已缓存到本机的视频，并�
 
 | 项目 | 值 |
 | --- | --- |
-| 版本 | **1.0.6**（versionCode 113） |
-| 文件 | [`apk/ruruDown-1.0.6-arm64-v8a.apk`](../apk/ruruDown-1.0.6-arm64-v8a.apk) |
+| 版本 | **1.0.6-beta.2**（versionCode 112） |
+| 文件 | [`apk/ruruDown-1.0.6-beta.2-arm64-v8a.apk`](../apk/ruruDown-1.0.6-beta.2-arm64-v8a.apk) |
 | 大小 | 5.2 MiB |
 | 架构 | `arm64-v8a` |
 | 系统要求 | Android 8.0 或更高 |
